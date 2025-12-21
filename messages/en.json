@@ -1,0 +1,100 @@
+{
+  "Topbar": {
+    "projects": "Projects",
+    "services": "Services",
+    "process": "Process",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "status": "Currently available for new projects",
+    "title_start": "Building",
+    "title_highlight": "High-Performance",
+    "title_end": "Enterprise Dashboards.",
+    "description": "I help B2B SaaS companies build scalable front-end architectures and complex data visualization platforms using React, NestJS, and TypeScript.",
+    "cta_projects": "View Projects",
+    "cta_code": "Check Code Quality"
+  },
+  "Services": {
+    "label": "Services",
+    "title": "Technically Challenging Work Only.",
+    "description": "I don't build simple brochure websites. I build the engines that run your business.",
+    "items": {
+      "visualization": {
+        "title": "Complex Data Visualization",
+        "desc": "Transforming raw analytics into interactive, decision-making dashboards using D3.js and Recharts."
+      },
+      "api": {
+        "title": "Scalable API Architecture",
+        "desc": "Designing high-concurrency Node.js/NestJS backends that handle 50k+ requests per second."
+      },
+      "legacy": {
+        "title": "Legacy System Refactoring",
+        "desc": "Modernizing monolithic codebases into modular micro-frontends without downtime."
+      }
+    }
+  },
+  "FeaturedWork": {
+    "label": "Featured Work",
+    "title": "Engineering Code Case Studies",
+    "description": "Due to NDA restrictions, I cannot show real screenshots. Here are the architectural challenges solved and results delivered.",
+    "nda_badge": "NDA Protected",
+    "items": {
+      "fintech": {
+        "category": "FinTech Platform",
+        "title": "High-Frequency Trading Dashboard",
+        "desc": "Built a real-time visualization engine for a prop trading firm utilizing WebSockets and WebGL for sub-millisecond updates.",
+        "stats": {
+          "label1": "Latency",
+          "label2": "Updates"
+        }
+      },
+      "ai": {
+        "category": "AI SaaS",
+        "title": "LLM Model Fine-tuning Interface",
+        "desc": "Developed the drag-and-drop workflow editor for engineers to chain prompt sequences and evaluate model outputs.",
+        "stats": {
+          "label1": "Users",
+          "label2": "Efficiency"
+        }
+      },
+      "logistics": {
+        "category": "Logistics",
+        "title": "Global Supply Chain Monitor",
+        "desc": "Legacy modernization of a 15-year old JSP system into a modern React application, handling millions of shipment records.",
+        "stats": {
+          "label1": "Legacy Code",
+          "label2": "Load Time"
+        }
+      }
+    }
+  },
+  "TechStack": {
+    "title": "Powering Next-Gen Applications with"
+  },
+  "AboutProcess": {
+    "title": "How I Work",
+    "description": "Software development is a team sport. Here is my playbook.",
+    "steps": {
+      "discovery": {
+        "title": "Discovery & Strategy",
+        "desc": "We analyze your business goals, user needs, and technical constraints to define the perfect solution."
+      },
+      "architecture": {
+        "title": "System Architecture",
+        "desc": "I design scalable database schemas and API patterns before writing a single line of code."
+      },
+      "development": {
+        "title": "Agile Development",
+        "desc": "Iterative sprints with regular demos. You see progress every week, not just at the deadline."
+      },
+      "deployment": {
+        "title": "Deployment & Scale",
+        "desc": "CI/CD pipelines, automated testing, and zero-downtime deployments to production."
+      }
+    }
+  },
+  "Footer": {
+    "title": "Portfolio.",
+    "copyright": "© {year} Senior Full-Stack Engineer."
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "Topbar": {
+    "projects": "精選專案",
+    "services": "服務項目",
+    "process": "合作流程",
+    "contact": "聯絡我"
+  },
+  "Hero": {
+    "status": "目前開放接收新專案",
+    "title_start": "打造",
+    "title_highlight": "高性能",
+    "title_end": "企業級儀表板與數據平台",
+    "description": "我協助 B2B SaaS 公司運用 React, NestJS 與 TypeScript 構建可擴展的前端架構與複雜數據視覺化平台。",
+    "cta_projects": "查看專案",
+    "cta_code": "檢視程式碼品質"
+  },
+  "Services": {
+    "label": "服務項目",
+    "title": "只承接具技術挑戰性的工作",
+    "description": "我不做簡單的形象網站，我構建驅動您業務的核心引擎。",
+    "items": {
+      "visualization": {
+        "title": "複雜數據視覺化",
+        "desc": "利用 D3.js 與 Recharts 將原始數據轉化為具備互動性、輔助決策的儀表板。"
+      },
+      "api": {
+        "title": "高擴展性 API 架構",
+        "desc": "設計每秒可處理 5 萬次以上請求的高併發 Node.js/NestJS 後端。"
+      },
+      "legacy": {
+        "title": "舊系統現代化重構",
+        "desc": "在無停機的情況下，將單體式舊代碼庫重構為模組化的微前端架構。"
+      }
+    }
+  },
+  "FeaturedWork": {
+    "label": "精選作品",
+    "title": "工程案例研究",
+    "description": "受限於 NDA 保密協議，無法展示真實螢幕截圖。以下是解決的架構挑戰與交付成果。",
+    "nda_badge": "NDA 保密專案",
+    "items": {
+      "fintech": {
+        "category": "金融科技平台",
+        "title": "高頻交易儀表板",
+        "desc": "為自營交易公司構建即時視覺化引擎，利用 WebSocket 與 WebGL 實現毫秒級更新。",
+        "stats": {
+          "label1": "延遲",
+          "label2": "數據更新"
+        }
+      },
+      "ai": {
+        "category": "AI SaaS",
+        "title": "LLM 模型微調介面",
+        "desc": "開發拖放式工作流編輯器，供工程師串接 Prompt 序列並評估模型輸出。",
+        "stats": {
+          "label1": "用戶數",
+          "label2": "效率提升"
+        }
+      },
+      "logistics": {
+        "category": "物流管理",
+        "title": "全球供應鏈監控系統",
+        "desc": "將 15 年歷史的 JSP 舊系統現代化為 React 應用程式，處理數百萬筆運輸記錄。",
+        "stats": {
+          "label1": "舊代碼移除",
+          "label2": "載入時間優化"
+        }
+      }
+    }
+  },
+  "TechStack": {
+    "title": "驅動下一代應用程式的核心技術"
+  },
+  "AboutProcess": {
+    "title": "工作流程",
+    "description": "軟體開發是團隊運動。這是我的戰術手冊。",
+    "steps": {
+      "discovery": {
+        "title": "探索與策略",
+        "desc": "分析您的商業目標、用戶需求與技術限制，定義最佳解決方案。"
+      },
+      "architecture": {
+        "title": "系統架構設計",
+        "desc": "在寫下第一行程式碼之前，先設計可擴展的資料庫架構與 API 模式。"
+      },
+      "development": {
+        "title": "敏捷開發",
+        "desc": "迭代衝刺 (Sprints) 並定期演示。您每週都能看到進度，而不是等到最後期限。"
+      },
+      "deployment": {
+        "title": "部署與擴展",
+        "desc": "CI/CD 流程、自動化測試，以及零停機部署至生產環境。"
+      }
+    }
+  },
+  "Footer": {
+    "title": "Portfolio.",
+    "copyright": "© {year} Senior Full-Stack Engineer."
+  }
+}
