@@ -28,106 +28,64 @@ export function FeaturedWork() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
             <span className="text-purple-500 font-mono text-sm uppercase tracking-wider mb-2 block">{t("label")}</span>
-            <h2 className="text-3xl md:text-5xl font-bold text-white">{t("title")}</h2>
-            <p className="mt-4 text-slate-400 max-w-xl">
-               {t("description")}
-            </p>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">{t("title")}</h2>
+            
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-lg bg-yellow-500/10 border border-yellow-500/20 mb-6">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-yellow-500"></span>
+                </span>
+                <span className="text-yellow-500 font-mono text-sm font-bold uppercase tracking-tight">{t("status_badge")}</span>
+                <span className="w-px h-4 bg-yellow-500/20" />
+                <span className="text-yellow-500/80 text-sm">{t("status_desc")}</span>
+            </div>
+
+
           </div>
         </div>
 
-        <div className="grid gap-8">
-          {projects.map((project, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group relative grid grid-cols-1 md:grid-cols-2 gap-0 overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/40 hover:border-slate-700 transition-all"
-            >
-                {/* Left: Abstract Architecture Visual */}
-                <div className="relative h-64 md:h-auto bg-slate-900 flex items-center justify-center overflow-hidden p-8">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-blue-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                    
-                    {/* Abstract Diagram */}
-                    <div className="relative z-10 grid grid-cols-3 gap-3 w-48 opacity-60 grayscale group-hover:grayscale-0 transition-all duration-500">
-                        <div className="w-12 h-12 rounded border border-slate-600 bg-slate-800 col-start-2" />
-                        <div className="col-span-3 h-px bg-slate-600 my-auto" />
-                        <div className="w-12 h-12 rounded border border-slate-600 bg-slate-800" />
-                        <div className="w-12 h-12 rounded border border-slate-600 bg-slate-800" />
-                        <div className="w-12 h-12 rounded border border-slate-600 bg-slate-800" />
+        <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="w-full min-h-[400px] rounded-3xl border border-dashed border-slate-800 bg-slate-900/20 flex flex-col items-center justify-center relative overflow-hidden group"
+        >
+            {/* Animated Background Pattern */}
+            <div className="absolute inset-0 opacity-20">
+                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.05)_50%,transparent_75%,transparent_100%)] bg-size-[250%_250%,100%_100%] animate-[shimmer_3s_infinite_linear]" />
+            </div>
+
+            <div className="relative z-10 flex flex-col items-center text-center p-8 max-w-lg">
+                <motion.div 
+                    animate={{ 
+                        rotate: [0, 10, -10, 0],
+                        y: [0, -5, 0]
+                    }}
+                    transition={{ 
+                        duration: 4, 
+                        repeat: Infinity,
+                        ease: "easeInOut" 
+                    }}
+                    className="w-24 h-24 rounded-2xl bg-slate-800 border-2 border-slate-700 flex items-center justify-center mb-8 shadow-2xl relative"
+                >
+                    <Lock className="w-10 h-10 text-slate-500" />
+                    <div className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-yellow-500 flex items-center justify-center animate-bounce">
+                        <div className="w-2 h-2 bg-slate-950 rounded-full" />
                     </div>
-                    
-                    <div className="absolute top-4 left-4 flex items-center gap-2 text-xs font-mono text-slate-500 bg-slate-950/80 px-2 py-1 rounded border border-slate-800">
-                        <Lock className="w-3 h-3" />
-                        {t("nda_badge")}
-                    </div>
+                </motion.div>
+
+                <h3 className="text-2xl font-bold text-white mb-3">{t("placeholder_title")}</h3>
+                <p className="text-slate-400 mb-8">
+                    {t("placeholder_desc")}
+                </p>
+
+                <div className="flex gap-4 opacity-50 pointer-events-none grayscale">
+                    <div className="h-20 w-32 bg-slate-800 rounded-lg border border-slate-700" />
+                    <div className="h-20 w-32 bg-slate-800 rounded-lg border border-slate-700" />
+                    <div className="h-20 w-32 bg-slate-800 rounded-lg border border-slate-700 hidden sm:block" />
                 </div>
-
-                {/* Right: Content */}
-                <div className="p-8 md:p-12 flex flex-col justify-center">
-                    <div className="mb-4 flex items-center justify-between">
-                         <span className="text-blue-400 text-sm font-medium">{t(`items.${project.key}.category`)}</span>
-                         <ArrowUpRight className="w-5 h-5 text-slate-500 group-hover:text-white transition-colors" />
-                    </div>
-                    
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-200 transition-colors">
-                        {t(`items.${project.key}.title`)}
-                    </h3>
-                    
-                    <p className="text-slate-400 mb-8 leading-relaxed">
-                        {t(`items.${project.key}.desc`)}
-                    </p>
-
-                    <div className="grid grid-cols-2 gap-6 mb-8 border-t border-b border-slate-800 py-6">
-                        <div>
-                            <div className="text-2xl font-bold text-white mb-1">{t(`items.${project.key}.stats.label1`)}</div>
-                            {/* Note: I am not fetching dynamic values for stats to simplify, assuming stats are static in translation or passed as structured data. 
-                                Actually, checking my json structure, I put label there. Value should probably be hardcoded or in json. 
-                                Wait, I put "Latency", "Updates" as keys in json? No "label1": "Latency".
-                                I will hardcode values here for simplicity as I didn't put values in json.
-                                In real app, values might be dynamic. I will use values from original code if possible or put in json.
-                                I'll hardcode values here as per design style.
-                            */}
-                             {/* Re-reading original code: value "< 20ms", label "Latency". 
-                                 In json: stats: { label1: "Latency", label2: "Updates" }
-                                 So I'll just map label1/label2.
-                             */}
-                             {/* Actually, let's just make it simple. I will just render label1 and label2 with hardcoded values matching the project order. pattern is fine. */}
-                        </div>
-                         {/* Correct approach: The stats values are data, not translation (mostly). The labels are translation.
-                             i'll restore the values from original array. */}
-                    </div>
-
-                    {/* Reworking the stats section specifically */}
-                     <div className="grid grid-cols-2 gap-6 mb-8 border-t border-b border-slate-800 py-6">
-                        <div>
-                           {/* Hardcoding values based on project key for now to save complexity of data structure refactor */}
-                           <div className="text-2xl font-bold text-white mb-1">
-                             {project.key === 'fintech' ? '< 20ms' : project.key === 'ai' ? '10k+' : '100% Gone'}
-                           </div>
-                           <div className="text-sm text-slate-500">{t(`items.${project.key}.stats.label1`)}</div>
-                        </div>
-                        <div>
-                           <div className="text-2xl font-bold text-white mb-1">
-                             {project.key === 'fintech' ? '5k/sec' : project.key === 'ai' ? '3x Faster' : '-70%'}
-                           </div>
-                           <div className="text-sm text-slate-500">{t(`items.${project.key}.stats.label2`)}</div>
-                        </div>
-                    </div>
-
-
-                    <div className="flex flex-wrap gap-2">
-                        {project.tags.map((tag) => (
-                            <span key={tag} className="px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700">
-                                {tag}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-            </motion.div>
-          ))}
-        </div>
+            </div>
+        </motion.div>
       </div>
     </section>
   );

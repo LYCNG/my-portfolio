@@ -18,13 +18,13 @@ export function Topbar() {
     <header className="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-900">
       <div className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold text-white tracking-tight">
-          Portfolio.
+          SharkLian Portfolio.
         </Link>
         
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
-            <Link href="/" className="hover:text-white transition-colors">{t("projects")}</Link>
-            <Link href="/" className="hover:text-white transition-colors">{t("services")}</Link>
-            <Link href="/" className="hover:text-white transition-colors">{t("process")}</Link>
+            <a href="#projects" className="hover:text-white transition-colors">{t("projects")}</a>
+            <a href="#services" className="hover:text-white transition-colors">{t("services")}</a>
+            <a href="#process" className="hover:text-white transition-colors">{t("process")}</a>
         </nav>
 
         <div className="flex items-center gap-4">
@@ -47,8 +47,8 @@ export function Topbar() {
                     繁中
                 </Button>
             </div>
-            <Button size="sm">
-                {t("contact")}
+            <Button size="sm" asChild>
+                <a href="#contact">{t("contact")}</a>
             </Button>
         </div>
       </div>

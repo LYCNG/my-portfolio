@@ -7,10 +7,27 @@
   },
   "Hero": {
     "status": "Currently available for new projects",
-    "title_start": "Building",
-    "title_highlight": "High-Performance",
-    "title_end": "Enterprise Dashboards.",
-    "description": "I help B2B SaaS companies build scalable front-end architectures and complex data visualization platforms using React, NestJS, and TypeScript.",
+    "title_prefix": "Senior Frontend Developer",
+    "title_highlight": "(React, NestJS)",
+    "title_suffix": "| Annotation Tools & Admin Panels",
+    "intro": "Hi, I’m <name>SharkLian</name>, a Senior Frontend Developer based in Taiwan. I specialize in scalable <react>React (Vite)</react> architecture, with <nest>NestJS</nest> capabilities for full-stack integration.",
+    "philosophy": "I thrive on complex logic. My toolbox allows me to choose the best tech for your needs—whether it's <tailwind>Tailwind CSS</tailwind> for a pixel-perfect custom UI, or <antd>Ant Design (AntD)</antd> / <mui>MUI</mui> for rapid enterprise dashboard development.",
+    "expertise_title": "My expertise includes:",
+    "expertise_items": {
+      "annotation": {
+        "title": "Interactive Annotation Interfaces",
+        "desc": "Precise 2D image labeling tools (Canvas/SVG) for AI workflows."
+      },
+      "ai": {
+        "title": "AI Parameter Tuning Platforms",
+        "desc": "Managing real-time states with Zustand/Redux."
+      },
+      "admin": {
+        "title": "Enterprise Admin Panels",
+        "desc": "Streamlining data workflows and permission management."
+      }
+    },
+    "closing": "My coding style is like a shark—clean, efficient, and precise. If you need a robust internal tool, I deliver solutions that work.",
     "cta_projects": "View Projects",
     "cta_code": "Check Code Quality"
   },
@@ -36,7 +53,10 @@
   "FeaturedWork": {
     "label": "Featured Work",
     "title": "Engineering Code Case Studies",
-    "description": "Due to NDA restrictions, I cannot show real screenshots. Here are the architectural challenges solved and results delivered.",
+    "status_badge": "On Ready",
+    "status_desc": "Technical demos are currently under construction.",
+    "placeholder_title": "Project Templates In Progress",
+    "placeholder_desc": "I am currently consolidating my commercial experience into sanitized, open-source template repositories. These will demo high-performance architectures without violating NDAs.",
     "nda_badge": "NDA Protected",
     "items": {
       "fintech": {
@@ -88,13 +108,13 @@
         "desc": "Iterative sprints with regular demos. You see progress every week, not just at the deadline."
       },
       "deployment": {
-        "title": "Deployment & Scale",
-        "desc": "CI/CD pipelines, automated testing, and zero-downtime deployments to production."
+        "title": "Fast Deployment",
+        "desc": "Streamlined build and deployment processes for rapid delivery to production."
       }
     }
   },
   "Footer": {
-    "title": "Portfolio.",
+    "title": "SharkLian Portfolio.",
     "copyright": "© {year} Senior Full-Stack Engineer."
   }
 }

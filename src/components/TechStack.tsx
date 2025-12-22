@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 
 const technologies = [
   "React", "Next.js", "TypeScript", "Node.js", "NestJS", "Mobx","Redux","PostgreSQL",
-   "Tailwind CSS", "Framer Motion", "Figma", "Git"
+   "Tailwind CSS", "Framer Motion", "Git"
 ];
 
 // Duplicate for continuous loop
@@ -15,7 +15,7 @@ export function TechStack() {
   const t = useTranslations("TechStack");
 
   return (
-    <div className="py-20 bg-slate-950 overflow-hidden border-t border-slate-900 text-center border">
+    <div className="py-20 bg-slate-950 overflow-hidden border-t border-slate-900 text-center ">
       <div className="container mx-auto px-4 md:px-6 mb-10 text-center">
         <h3 className="text-xl font-semibold text-slate-400">{t("title")}</h3>
       </div>

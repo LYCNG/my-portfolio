@@ -10,10 +10,18 @@ export default function Home() {
     <div className="flex flex-col min-h-screen ">
       <Hero />
       <TechStack />
-      <Services />
-      <FeaturedWork />
-      <AboutProcess />
-      <Footer />
+      <div id="services">
+        <Services />
+      </div>
+      <div id="projects">
+        <FeaturedWork />
+      </div>
+      <div id="process">
+        <AboutProcess />
+      </div>
+      <div id="contact">
+        <Footer />
+      </div>
     </div>
   );
 }

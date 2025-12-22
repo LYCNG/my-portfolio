@@ -7,10 +7,27 @@
   },
   "Hero": {
     "status": "目前開放接收新專案",
-    "title_start": "打造",
-    "title_highlight": "高性能",
-    "title_end": "企業級儀表板與數據平台",
-    "description": "我協助 B2B SaaS 公司運用 React, NestJS 與 TypeScript 構建可擴展的前端架構與複雜數據視覺化平台。",
+    "title_prefix": "資深前端工程師",
+    "title_highlight": "(React & NestJS)",
+    "title_suffix": "| 專精標註工具與後台系統",
+    "intro": "嗨！我是 <name>SharkLian</name>，來自台灣的資深前端工程師。我專注於 <react>React (Vite)</react> 前端架構設計，並具備 <nest>NestJS</nest> 後端開發能力，為企業打造高效能的網頁應用。",
+    "philosophy": "我能根據專案需求靈活運用技術棧：使用 <tailwind>Tailwind CSS</tailwind> 打造高質感的客製化介面，或利用 <antd>Ant Design (AntD)</antd> / <mui>MUI</mui> 快速建構功能強大的企業級後台。",
+    "expertise_title": "我的核心開發經驗包括：",
+    "expertise_items": {
+      "annotation": {
+        "title": "互動式平面標註介面",
+        "desc": "開發高精度的影像標註工具 (Canvas/SVG)。"
+      },
+      "ai": {
+        "title": "AI 參數調控測試平台",
+        "desc": "解決複雜的狀態管理與即時預覽需求。"
+      },
+      "admin": {
+        "title": "企業級管理後台",
+        "desc": "整合數據可視化與權限控管的完整系統。"
+      }
+    },
+    "closing": "我的代碼風格就像 Shark 一樣——精準且高效。如果您正在尋找一位能駕馭複雜邏輯，並具備產品思維的工程師，歡迎與我聯繫！",
     "cta_projects": "查看專案",
     "cta_code": "檢視程式碼品質"
   },
@@ -35,8 +52,11 @@
   },
   "FeaturedWork": {
     "label": "精選作品",
-    "title": "工程案例研究",
-    "description": "受限於 NDA 保密協議，無法展示真實螢幕截圖。以下是解決的架構挑戰與交付成果。",
+    "title": "工程案例模板",
+    "status_badge": "準備中 (On Ready)",
+    "status_desc": "目前尚未完成，暫無技術展示。",
+    "placeholder_title": "專案範本準備中",
+    "placeholder_desc": "我目前正在整理過去的商業專案經驗，並將其轉化為去敏感化的開源範本。這些範本將展示高性能架構，同時遵守 NDA 保密協議。",
     "nda_badge": "NDA 保密專案",
     "items": {
       "fintech": {
@@ -88,13 +108,13 @@
         "desc": "迭代衝刺 (Sprints) 並定期演示。您每週都能看到進度，而不是等到最後期限。"
       },
       "deployment": {
-        "title": "部署與擴展",
-        "desc": "CI/CD 流程、自動化測試，以及零停機部署至生產環境。"
+        "title": "快速部署",
+        "desc": "簡化的建置與部署流程，實現產品的快速交付。"
       }
     }
   },
   "Footer": {
-    "title": "Portfolio.",
+    "title": "SharkLian Portfolio.",
     "copyright": "© {year} Senior Full-Stack Engineer."
   }
 }
