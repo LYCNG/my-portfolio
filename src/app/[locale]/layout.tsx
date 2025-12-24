@@ -6,8 +6,11 @@ import { Topbar } from '@/components/Topbar';
 import "../globals.css";
 
 export const metadata = {
-  title: "Portfolio | Full-Stack Engineer",
-  description: "Senior Full-Stack Engineer specializing in B2B SaaS and Complex Dashboards.",
+  title: "SharkLian Portfolio | Senior Frontend Developer",
+  description: "Senior Frontend Developer specializing in React architecture, annotation tools, and admin panels.",
+  icons: {
+    icon: "/lian.svg",
+  },
 };
 
 export default async function RootLayout({
