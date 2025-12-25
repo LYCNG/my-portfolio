@@ -8,7 +8,7 @@
   "Hero": {
     "status": "目前開放接收新專案",
     "title_prefix": "資深前端工程師",
-    "title_highlight": "(React & NestJS)",
+    "title_highlight": "(React & TypeScript)",
     "title_suffix": "| 專精標註工具與後台系統",
     "intro": "嗨！我是 <name>SharkLian</name>，來自台灣的資深前端工程師。我專注於 <react>React (Vite)</react> 前端架構設計，並具備 <nest>NestJS</nest> 後端開發能力，為企業打造高效能的網頁應用。",
     "philosophy": "我能根據專案需求靈活運用技術棧：使用 <tailwind>Tailwind CSS</tailwind> 打造高質感的客製化介面，或利用 <antd>Ant Design (AntD)</antd> / <mui>MUI</mui> 快速建構功能強大的企業級後台。",
@@ -52,39 +52,16 @@
   },
   "FeaturedWork": {
     "label": "精選作品",
-    "title": "工程案例模板",
-    "status_badge": "準備中 (On Ready)",
-    "status_desc": "目前尚未完成，暫無技術展示。",
-    "placeholder_title": "專案範本準備中",
-    "placeholder_desc": "我目前正在整理過去的商業專案經驗，並將其轉化為去敏感化的開源範本。這些範本將展示高性能架構，同時遵守 NDA 保密協議。",
-    "nda_badge": "NDA 保密專案",
-    "items": {
-      "fintech": {
-        "category": "金融科技平台",
-        "title": "高頻交易儀表板",
-        "desc": "為自營交易公司構建即時視覺化引擎，利用 WebSocket 與 WebGL 實現毫秒級更新。",
-        "stats": {
-          "label1": "延遲",
-          "label2": "數據更新"
-        }
-      },
-      "ai": {
-        "category": "AI SaaS",
-        "title": "LLM 模型微調介面",
-        "desc": "開發拖放式工作流編輯器，供工程師串接 Prompt 序列並評估模型輸出。",
-        "stats": {
-          "label1": "用戶數",
-          "label2": "效率提升"
-        }
-      },
-      "logistics": {
-        "category": "物流管理",
-        "title": "全球供應鏈監控系統",
-        "desc": "將 15 年歷史的 JSP 舊系統現代化為 React 應用程式，處理數百萬筆運輸記錄。",
-        "stats": {
-          "label1": "舊代碼移除",
-          "label2": "載入時間優化"
-        }
+    "title": "專案展示",
+    "view_demo": "查看 Demo",
+    "desktop_only": "僅支援桌機版",
+    "more_coming": "更多專案即將上線...",
+    "projects": {
+      "annotation": {
+        "category": "AI / 電腦視覺工具",
+        "title": "圖像標註平台",
+        "desc": "專為 AI 與電腦視覺工作流程設計的專業級圖像標註工具。支援拖放批量上傳、精準標註工具，以及針對長時間使用優化的深色主題介面。",
+        "tags": ["React", "Material-UI", "Vite", "Canvas API"]
       }
     }
   },

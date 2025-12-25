@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Twitter, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 
@@ -17,17 +17,20 @@ export function Footer() {
                 </div>
 
                 <div className="flex gap-4">
-                    <Button variant="ghost" size="sm" className="rounded-full w-10 h-10 p-0">
-                        <Github className="w-5 h-5" />
+                    <Button variant="ghost" size="sm" className="rounded-full w-10 h-10 p-0" asChild>
+                        <a href="https://github.com/LYCNG" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <Github className="w-5 h-5" />
+                        </a>
                     </Button>
-                    <Button variant="ghost" size="sm" className="rounded-full w-10 h-10 p-0">
-                        <Twitter className="w-5 h-5" />
+                    <Button variant="ghost" size="sm" className="rounded-full w-10 h-10 p-0" asChild>
+                        <a href="https://www.linkedin.com/in/lian-dev/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <Linkedin className="w-5 h-5" />
+                        </a>
                     </Button>
-                    <Button variant="ghost" size="sm" className="rounded-full w-10 h-10 p-0">
-                        <Linkedin className="w-5 h-5" />
-                    </Button>
-                    <Button variant="ghost" size="sm" className="rounded-full w-10 h-10 p-0">
-                        <Mail className="w-5 h-5" />
+                    <Button variant="ghost" size="sm" className="rounded-full w-10 h-10 p-0" asChild>
+                        <a href="mailto:liancheng196@gmail.com" aria-label="Email">
+                            <Mail className="w-5 h-5" />
+                        </a>
                     </Button>
                 </div>
             </div>

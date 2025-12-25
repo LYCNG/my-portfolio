@@ -8,7 +8,7 @@
   "Hero": {
     "status": "Currently available for new projects",
     "title_prefix": "Senior Frontend Developer",
-    "title_highlight": "(React, NestJS)",
+       "title_highlight": "(React & TypeScript)",
     "title_suffix": "| Annotation Tools & Admin Panels",
     "intro": "Hi, I’m <name>SharkLian</name>, a Senior Frontend Developer based in Taiwan. I specialize in scalable <react>React (Vite)</react> architecture, with <nest>NestJS</nest> capabilities for full-stack integration.",
     "philosophy": "I thrive on complex logic. My toolbox allows me to choose the best tech for your needs—whether it's <tailwind>Tailwind CSS</tailwind> for a pixel-perfect custom UI, or <antd>Ant Design (AntD)</antd> / <mui>MUI</mui> for rapid enterprise dashboard development.",
@@ -52,39 +52,16 @@
   },
   "FeaturedWork": {
     "label": "Featured Work",
-    "title": "Engineering Code Case Studies",
-    "status_badge": "On Ready",
-    "status_desc": "Technical demos are currently under construction.",
-    "placeholder_title": "Project Templates In Progress",
-    "placeholder_desc": "I am currently consolidating my commercial experience into sanitized, open-source template repositories. These will demo high-performance architectures without violating NDAs.",
-    "nda_badge": "NDA Protected",
-    "items": {
-      "fintech": {
-        "category": "FinTech Platform",
-        "title": "High-Frequency Trading Dashboard",
-        "desc": "Built a real-time visualization engine for a prop trading firm utilizing WebSockets and WebGL for sub-millisecond updates.",
-        "stats": {
-          "label1": "Latency",
-          "label2": "Updates"
-        }
-      },
-      "ai": {
-        "category": "AI SaaS",
-        "title": "LLM Model Fine-tuning Interface",
-        "desc": "Developed the drag-and-drop workflow editor for engineers to chain prompt sequences and evaluate model outputs.",
-        "stats": {
-          "label1": "Users",
-          "label2": "Efficiency"
-        }
-      },
-      "logistics": {
-        "category": "Logistics",
-        "title": "Global Supply Chain Monitor",
-        "desc": "Legacy modernization of a 15-year old JSP system into a modern React application, handling millions of shipment records.",
-        "stats": {
-          "label1": "Legacy Code",
-          "label2": "Load Time"
-        }
+    "title": "Project Showcase",
+    "view_demo": "View Demo",
+    "desktop_only": "Desktop Only",
+    "more_coming": "More projects coming soon...",
+    "projects": {
+      "annotation": {
+        "category": "AI / Computer Vision Tool",
+        "title": "Image Annotation Platform",
+        "desc": "A professional-grade image annotation tool designed for AI and computer vision workflows. Features drag-and-drop batch upload, precision labeling tools, and an intuitive dark-mode interface optimized for extended use.",
+        "tags": ["React", "Material-UI", "Vite", "Canvas API"]
       }
     }
   },
