@@ -55,6 +55,7 @@
     "title": "專案展示",
     "view_demo": "查看 Demo",
     "desktop_only": "僅支援桌機版",
+    "responsive": "支援桌機與手機",
     "more_coming": "更多專案即將上線...",
     "projects": {
       "annotation": {
@@ -62,6 +63,12 @@
         "title": "圖像標註平台",
         "desc": "專為 AI 與電腦視覺工作流程設計的專業級圖像標註工具。支援拖放批量上傳、精準標註工具，以及針對長時間使用優化的深色主題介面。",
         "tags": ["React", "Material-UI", "Vite", "Canvas API"]
+      },
+      "intelligence": {
+        "category": "電商與管理後台",
+        "title": "Shark Intelligence",
+        "desc": "雙模式零售平台，包含顧客模式（購物與結帳）及管理者模式（即時分析戰情室與庫存管理）。支援深淺色主題切換及多語言。",
+        "tags": ["React", "TypeScript", "Tailwind CSS", "i18n"]
       }
     }
   },

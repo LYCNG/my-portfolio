@@ -55,6 +55,7 @@
     "title": "Project Showcase",
     "view_demo": "View Demo",
     "desktop_only": "Desktop Only",
+    "responsive": "Desktop & Mobile",
     "more_coming": "More projects coming soon...",
     "projects": {
       "annotation": {
@@ -62,6 +63,12 @@
         "title": "Image Annotation Platform",
         "desc": "A professional-grade image annotation tool designed for AI and computer vision workflows. Features drag-and-drop batch upload, precision labeling tools, and an intuitive dark-mode interface optimized for extended use.",
         "tags": ["React", "Material-UI", "Vite", "Canvas API"]
+      },
+      "intelligence": {
+        "category": "E-commerce & Management Dashboard",
+        "title": "Shark Intelligence",
+        "desc": "A dual-mode retail platform featuring Customer Mode for shopping and checkout, plus Manager Mode with a War Room for real-time analytics and inventory management. Includes dark/light theme and multi-language support.",
+        "tags": ["React", "TypeScript", "Tailwind CSS", "i18n"]
       }
     }
   },

@@ -5,10 +5,8 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   /* config options here */
-  experimental: {
-    // @ts-expect-error - allowedDevOrigins is required for cross-device testing but types might be strict
-    allowedDevOrigins: ["192.168.22.152:3000", "localhost:3000"],
-  },
+  // For LAN testing, run: npm run dev -- -H 0.0.0.0
+  // Then access via your local IP (check with ipconfig/ifconfig)
 };
 
 export default withNextIntl(nextConfig);

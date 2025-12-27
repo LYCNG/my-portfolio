@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, Monitor } from "lucide-react";
+import { ArrowUpRight, Monitor, Smartphone } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Button } from "./ui/button";
 
@@ -14,6 +14,14 @@ export function FeaturedWork() {
       image: "/projects/annotation-studio.png",
       url: "https://sharklian-annotiation-studio.vercel.app/",
       tags: ["React", "Material-UI", "Vite", "Konva"],
+      responsive: false,
+    },
+    {
+      key: "intelligence",
+      image: "/projects/shark-intelligence.png",
+      url: "https://shark-lian-intelligence.vercel.app/",
+      tags: ["React", "TypeScript", "Tailwind CSS", "i18n","Ant Design"],
+      responsive: true,
     },
   ];
 
@@ -46,10 +54,19 @@ export function FeaturedWork() {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent" />
                 
-                {/* Desktop Only Badge */}
-                <div className="absolute top-4 left-4 flex items-center gap-2 text-xs font-mono text-slate-300 bg-slate-950/80 px-3 py-1.5 rounded-full border border-slate-700">
-                  <Monitor className="w-3.5 h-3.5" />
-                  {t("desktop_only")}
+                {/* Platform Badge */}
+                <div className={`absolute top-4 left-4 flex items-center gap-2 text-xs font-mono bg-slate-950/80 px-3 py-1.5 rounded-full border ${project.responsive ? 'text-green-400 border-green-500/30' : 'text-slate-300 border-slate-700'}`}>
+                  {project.responsive ? (
+                    <>
+                      <Smartphone className="w-3.5 h-3.5" />
+                      {t("responsive")}
+                    </>
+                  ) : (
+                    <>
+                      <Monitor className="w-3.5 h-3.5" />
+                      {t("desktop_only")}
+                    </>
+                  )}
                 </div>
               </div>
 
