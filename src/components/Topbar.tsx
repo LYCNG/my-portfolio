@@ -19,13 +19,14 @@ export function Topbar() {
       <div className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-xl font-bold text-white tracking-tight">
           <img src="/lian.svg" alt="SharkLian" className="w-8 h-8" />
-          SharkLian Portfolio.
+          <span className="hidden sm:inline">SharkLian Portfolio.</span>
         </Link>
         
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
             <a href="#projects" className="hover:text-white transition-colors">{t("projects")}</a>
             <a href="#services" className="hover:text-white transition-colors">{t("services")}</a>
             <a href="#process" className="hover:text-white transition-colors">{t("process")}</a>
+            <a href="#hire" className="hover:text-white transition-colors">{t("hire")}</a>
         </nav>
 
         <div className="flex items-center gap-4">

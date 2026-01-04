@@ -3,11 +3,12 @@ import { Services } from "@/components/Services";
 import { FeaturedWork } from "@/components/FeaturedWork";
 import { TechStack } from "@/components/TechStack";
 import { AboutProcess } from "@/components/AboutProcess";
+import { HireMe } from "@/components/HireMe";
 import { Footer } from "@/components/Footer";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="flex flex-col min-h-screen ">
+    <div className="flex flex-col min-h-screen">
       <Hero />
       <TechStack />
       <div id="services">
@@ -18,6 +19,9 @@ export default function Home() {
       </div>
       <div id="process">
         <AboutProcess />
+      </div>
+      <div id="hire">
+        <HireMe />
       </div>
       <div id="contact">
         <Footer />

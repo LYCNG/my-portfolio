@@ -3,6 +3,7 @@
     "projects": "Projects",
     "services": "Services",
     "process": "Process",
+    "hire": "Work With Me",
     "contact": "Contact"
   },
   "Hero": {
@@ -29,7 +30,8 @@
     },
     "closing": "My coding style is like a shark—clean, efficient, and precise. If you need a robust internal tool, I deliver solutions that work.",
     "cta_projects": "View Projects",
-    "cta_code": "Check Code Quality"
+    "cta_code": "Check Code Quality",
+    "rwd_capability": "Expert in Responsive Design Templates (Desktop · Tablet · Mobile)"
   },
   "Services": {
     "label": "Services",
@@ -71,6 +73,16 @@
         "tags": ["React", "TypeScript", "Tailwind CSS", "i18n"]
       }
     }
+  },
+  "HireMe": {
+    "title": "Work With Me",
+    "desc": "I am available for freelance projects and contract work. Connect with me on these platforms:",
+    "platforms": {
+      "upwork": "Upwork",
+      "arc": "Arc.dev",
+      "glints": "Glints"
+    },
+    "cta": "View Profile"
   },
   "TechStack": {
     "title": "Powering Next-Gen Applications with"

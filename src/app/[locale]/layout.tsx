@@ -33,7 +33,7 @@ export default async function RootLayout({
  
   return (
     <html lang={locale} className="dark" suppressHydrationWarning>
-      <body className="min-h-screen bg-slate-950 font-sans antialiased text-white">
+      <body className="min-h-screen bg-slate-950 font-sans antialiased text-white" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <Topbar />
           <main className="pt-16">

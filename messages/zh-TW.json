@@ -3,6 +3,7 @@
     "projects": "精選專案",
     "services": "服務項目",
     "process": "合作流程",
+    "hire": "與我合作",
     "contact": "聯絡我"
   },
   "Hero": {
@@ -29,7 +30,8 @@
     },
     "closing": "我的代碼風格就像 Shark 一樣——精準且高效。如果您正在尋找一位能駕馭複雜邏輯，並具備產品思維的工程師，歡迎與我聯繫！",
     "cta_projects": "查看專案",
-    "cta_code": "檢視程式碼品質"
+    "cta_code": "檢視程式碼品質",
+    "rwd_capability": "精通 RWD 響應式模版開發 (電腦 · 平板 · 手機)"
   },
   "Services": {
     "label": "服務項目",
@@ -71,6 +73,16 @@
         "tags": ["React", "TypeScript", "Tailwind CSS", "i18n"]
       }
     }
+  },
+  "HireMe": {
+    "title": "與我合作",
+    "desc": "我目前接受自由接案與合約開發委託。您可以在以下平台找到我：",
+    "platforms": {
+      "upwork": "Upwork",
+      "arc": "Arc.dev",
+      "glints": "Glints"
+    },
+    "cta": "查看個人檔案"
   },
   "TechStack": {
     "title": "驅動下一代應用程式的核心技術"

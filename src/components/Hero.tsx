@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github } from "lucide-react";
+import { ArrowRight, Github, Monitor, Tablet, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 
@@ -111,19 +111,57 @@ export function Hero() {
           </Button>
         </motion.div>
 
-        {/* Abstract Tech Visual */}
+        {/* Feature Visual: RWD Capability */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-20 w-full max-w-5xl h-64 md:h-96 rounded-t-3xl border-t border-l border-r border-slate-800 bg-slate-900/50 backdrop-blur-sm relative overflow-hidden"
+          className="mt-20 w-full max-w-5xl h-64 md:h-96 rounded-t-3xl border-t border-l border-r border-slate-800 bg-slate-900/50 backdrop-blur-sm relative overflow-hidden group"
         >
-            <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                <div className="grid grid-cols-6 gap-4 animate-pulse">
-                     {[...Array(24)].map((_, i) => (
-                         <div key={i} className="w-16 h-8 rounded bg-slate-700/50" />
-                     ))}
+            <div className="absolute inset-0 flex flex-col items-center justify-center">
+                <div className="flex items-end gap-4 md:gap-8 mb-6">
+                    {/* Desktop */}
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.7 }}
+                        className="flex flex-col items-center gap-3"
+                    >
+                        <Monitor className="w-16 h-16 md:w-24 md:h-24 text-slate-700/50 group-hover:text-blue-500/80 transition-colors duration-500" />
+                        <div className="h-1 w-12 md:w-20 bg-slate-800 rounded-full group-hover:bg-blue-500/50 transition-colors duration-500" />
+                    </motion.div>
+
+                    {/* Tablet */}
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.8 }}
+                        className="flex flex-col items-center gap-2"
+                    >
+                        <Tablet className="w-12 h-12 md:w-16 md:h-16 text-slate-700/50 group-hover:text-purple-500/80 transition-colors duration-500" />
+                        <div className="h-1 w-8 md:w-12 bg-slate-800 rounded-full group-hover:bg-purple-500/50 transition-colors duration-500" />
+                    </motion.div>
+
+                    {/* Mobile */}
+                    <motion.div 
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.9 }}
+                         className="flex flex-col items-center gap-1"
+                    >
+                        <Smartphone className="w-8 h-8 md:w-10 md:h-10 text-slate-700/50 group-hover:text-emerald-500/80 transition-colors duration-500" />
+                        <div className="h-1 w-4 md:w-6 bg-slate-800 rounded-full group-hover:bg-emerald-500/50 transition-colors duration-500" />
+                    </motion.div>
                 </div>
+                
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1 }}
+                    className="px-6 py-2 rounded-full bg-slate-950/80 border border-slate-800 text-slate-300 font-mono text-sm md:text-base backdrop-blur-md"
+                >
+                    {t("rwd_capability")}
+                </motion.div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-slate-950 to-transparent" />
             
