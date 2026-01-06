@@ -5,13 +5,33 @@ import { routing } from '@/i18n/routing';
 import { Topbar } from '@/components/Topbar';
 import "../globals.css";
 
-export const metadata = {
-  title: "SharkLian Portfolio | Senior Frontend Developer",
-  description: "Senior Frontend Developer specializing in React architecture, annotation tools, and admin panels.",
-  icons: {
-    icon: "/lian.svg",
-  },
-};
+import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    icons: {
+      icon: "/lian.svg",
+    },
+    openGraph: {
+      title: t('og.title'),
+      description: t('og.description'),
+      type: 'website',
+      siteName: 'SharkLian Portfolio',
+      locale: locale === 'zh-TW' ? 'zh_TW' : 'en_US',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('og.title'),
+      description: t('og.description'),
+    },
+    keywords: t('keywords'),
+  };
+}
 
 export default async function RootLayout({
   children,

@@ -1,4 +1,13 @@
 {
+  "Metadata": {
+    "title": "SharkLian Portfolio | Senior React Developer & Frontend Freelancer",
+    "description": "Professional React Developer helping businesses build scalable web apps. Specializing in Frontend Contracting, React/Next.js Architecture, and Admin Panels.",
+    "keywords": "Frontend Freelance, React Developer, React Contractor, Web Development Services, Next.js Expert, Frontend Architecture, Remote Frontend Engineer",
+    "og": {
+      "title": "SharkLian Portfolio | Senior React Developer & Frontend Freelancer",
+      "description": "Looking for a React Developer? I provide top-tier Frontend Freelance services using React, Next.js & TypeScript."
+    }
+  },
   "Topbar": {
     "projects": "Projects",
     "services": "Services",

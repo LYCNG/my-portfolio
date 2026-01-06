@@ -1,4 +1,13 @@
 {
+  "Metadata": {
+    "title": "SharkLian Portfolio | 資深 React 前端工程師 (前端接案/專案開發)",
+    "description": "提供高品質的前端接案服務。專精於 React、Next.js 與 TypeScript 網站開發。我是 SharkLian，一位重視效能與架構的 React Developer，協助企業打造圖像標註工具與企業級後台系統。",
+    "keywords": "前端接案, React接案, React Developer, 前端工程師, 網頁外包, Next.js 開發, 網站透過, 軟體接案",
+    "og": {
+      "title": "SharkLian Portfolio | 資深 React 前端工程師 (前端接案专家)",
+      "description": "尋找專業的 React Developer？提供高品質前端接案服務。精通 React, Next.js & TypeScript。"
+    }
+  },
   "Topbar": {
     "projects": "精選專案",
     "services": "服務項目",
