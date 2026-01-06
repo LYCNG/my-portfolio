@@ -1,12 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Monitor, Tablet, Smartphone } from "lucide-react";
+import { ArrowRight, Monitor, Tablet, Smartphone } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 
 export function Hero() {
   const t = useTranslations("Hero");
+
+
 
   return (
     <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden pt-20">
@@ -101,13 +104,21 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
         >
-          <Button size="lg" className="rounded-full group">
-            {t("cta_projects")}
-            <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+          <Button size="lg" className="rounded-full group" asChild>
+            <a href="#projects">
+              {t("cta_projects")}
+              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </a>
           </Button>
-          <Button variant="outline" size="lg" className="rounded-full">
-            <Github className="mr-2 w-4 h-4" />
-            {t("cta_code")}
+          <Button variant="outline" size="lg" className="rounded-full" asChild>
+            <a 
+              href="https://github.com/LYCNG/my-portfolio" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="mr-2 w-4 h-4" />
+              {t("cta_code")}
+            </a>
           </Button>
         </motion.div>
 
