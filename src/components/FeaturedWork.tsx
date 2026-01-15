@@ -25,7 +25,7 @@ export function FeaturedWork() {
     },{
       key: "art",
       image: "/projects/project-preview.png",
-      url: "https://shark-lian-art.vercel.app/",
+      url: "https://art-gallery-brown.vercel.app",
       tags: ["React", "TypeScript", "Tailwind CSS", "framer-motion"],
       responsive: true,
     }
