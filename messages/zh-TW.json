@@ -80,6 +80,12 @@
         "title": "Shark Intelligence",
         "desc": "雙模式零售平台，包含顧客模式（購物與結帳）及管理者模式（即時分析戰情室與庫存管理）。支援深淺色主題切換及多語言。",
         "tags": ["React", "TypeScript", "Tailwind CSS", "i18n"]
+      },
+      "art": {
+        "category": "創意編程 / 藝術展示",
+        "title": "ArtSide 藝廊",
+        "desc": "運用生物發光視覺美學打造的高級數位藝覽，整合流暢的動態互動體驗。",
+        "tags": ["React", "TypeScript", "Tailwind CSS", "framer-motion"]
       }
     }
   },

@@ -80,6 +80,12 @@
         "title": "Shark Intelligence",
         "desc": "A dual-mode retail platform featuring Customer Mode for shopping and checkout, plus Manager Mode with a War Room for real-time analytics and inventory management. Includes dark/light theme and multi-language support.",
         "tags": ["React", "TypeScript", "Tailwind CSS", "i18n"]
+      },
+      "art": {
+        "category": "Creative Coding / Art",
+        "title": "ArtSide Gallery",
+        "desc": "A high-end digital art gallery featuring interactive animations and bioluminescent design.",
+        "tags": ["React", "TypeScript", "Tailwind CSS", "framer-motion"]
       }
     }
   },

@@ -22,7 +22,13 @@ export function FeaturedWork() {
       url: "https://shark-lian-intelligence.vercel.app/",
       tags: ["React", "TypeScript", "Tailwind CSS", "i18n","Ant Design"],
       responsive: true,
-    },
+    },{
+      key: "art",
+      image: "/projects/project-preview.png",
+      url: "https://shark-lian-art.vercel.app/",
+      tags: ["React", "TypeScript", "Tailwind CSS", "framer-motion"],
+      responsive: true,
+    }
   ];
 
   return (
