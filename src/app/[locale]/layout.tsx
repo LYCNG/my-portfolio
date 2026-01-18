@@ -60,6 +60,27 @@ export default async function RootLayout({
             {children}
           </main>
         </NextIntlClientProvider>
+        
+        {/* JSON-LD Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "SharkLian",
+              "url": "https://sharklian-portfolio.vercel.app",
+              "jobTitle": "Senior Frontend Developer",
+              "description": "Senior Frontend Developer specializing in React, Next.js, and TypeScript architecture.",
+              "image": "https://sharklian-portfolio.vercel.app/lian.svg",
+              "sameAs": [
+                "https://github.com/LYCNG/my-portfolio",
+                "https://www.upwork.com/freelancers/~0111dd1d91dfc8f766",
+                "https://www.fiverr.com/gray_shark/convert-figma-to-next-js-and-tailwind-css"
+              ]
+            })
+          }}
+        />
       </body>
     </html>
   );

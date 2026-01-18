@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowUpRight, Monitor, Smartphone } from "lucide-react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Button } from "./ui/button";
 
@@ -25,14 +26,14 @@ export function FeaturedWork() {
     },{
       key: "art",
       image: "/projects/project-preview.png",
-      url: "https://art-gallery-brown.vercel.app",
+      url: "https://shark-lian-art.vercel.app/",
       tags: ["React", "TypeScript", "Tailwind CSS", "framer-motion"],
       responsive: true,
     }
   ];
 
   return (
-    <section className="py-24 bg-slate-950 border-t border-slate-900">
+    <section className="py-24 bg-slate-950 border-t border-slate-900" id="projects">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div>
@@ -53,13 +54,15 @@ export function FeaturedWork() {
             >
               {/* Left: Screenshot */}
               <div className="relative h-64 lg:h-auto bg-slate-900 overflow-hidden">
-                <img 
-                  src={project.image} 
+                <Image
+                  src={project.image}
                   alt={t(`projects.${project.key}.title`)}
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent" />
-                
+
                 {/* Platform Badge */}
                 <div className={`absolute top-4 left-4 flex items-center gap-2 text-xs font-mono bg-slate-950/80 px-3 py-1.5 rounded-full border ${project.responsive ? 'text-green-400 border-green-500/30' : 'text-slate-300 border-slate-700'}`}>
                   {project.responsive ? (

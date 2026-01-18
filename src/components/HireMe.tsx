@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { ArrowUpRight } from "lucide-react";
-
+import { SiFiverr, SiUpwork } from "react-icons/si";
 
 export function HireMe() {
   const t = useTranslations("HireMe");
@@ -11,18 +11,19 @@ export function HireMe() {
     {
       key: "upwork",
       name: "Upwork",
-      url: "https://www.upwork.com/freelancers/~0111dd1d91dfc8f766?mp_source=share", // Placeholder URL, to be updated
+      url: "https://www.upwork.com/freelancers/~0111dd1d91dfc8f766?mp_source=share", 
       color: "hover:border-[#14a800] hover:text-[#14a800]",
-      bg: "hover:bg-[#14a800]/5"
+      bg: "hover:bg-[#14a800]/5",
+      icon: SiUpwork 
     },
     {
-      key: "arc",
-      name: "Arc.dev",
-      url: "https://arc.dev/dashboard/d/profile/edit", // Placeholder
-      color: "hover:border-[#35469C] hover:text-[#35469C]",
-      bg: "hover:bg-[#35469C]/5"
-    },
-
+      key: "fiverr",
+      name: "Fiverr",
+      url: "https://www.fiverr.com/gray_shark/convert-figma-to-next-js-and-tailwind-css",
+      color: "hover:border-[#1DBF73] hover:text-[#1DBF73]",
+      bg: "hover:bg-[#1DBF73]/5",
+      icon: SiFiverr
+    }
   ];
 
   return (
@@ -44,9 +45,12 @@ export function HireMe() {
               rel="noopener noreferrer"
               className={`group flex flex-col items-center justify-center p-6 md:p-8 rounded-2xl border border-slate-800 bg-slate-900/40 transition-all duration-300 ${platform.color} ${platform.bg}`}
             >
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-inherit transition-colors">
-                {platform.name}
-              </h3>
+              <div className="flex items-center gap-2 mb-2">
+                 {platform.icon && <platform.icon className="w-6 h-6" />}
+                 <h3 className="text-xl font-bold text-white group-hover:text-inherit transition-colors">
+                  {platform.name}
+                 </h3>
+              </div>
               <div className="flex items-center text-sm font-medium text-slate-500 group-hover:text-inherit transition-colors">
                 {t("cta")}
                 <ArrowUpRight className="w-4 h-4 ml-1 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
