@@ -21,9 +21,9 @@ export function Hero() {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col items-center text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, ease: "backOut" }}
           className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-sm mb-8"
         >
           <span className="relative flex h-2 w-2">
@@ -34,9 +34,9 @@ export function Hero() {
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.8, ease: [0.34, 1.56, 0.64, 1], delay: 0.1 }}
           className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-wider leading-24 text-white mb-6 max-w-5xl text-balance"
         >
           {t("title_prefix")} <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-400">{t("title_highlight")}</span> <br className="hidden md:block" />
@@ -46,7 +46,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl text-balance space-y-6 leading-relaxed"
         >
           <p>

@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
 import { Button } from "./ui/button";
-import { Languages } from "lucide-react";
+import Image from "next/image";
 
 export function Topbar() {
   const t = useTranslations("Topbar");
@@ -18,7 +18,14 @@ export function Topbar() {
     <header className="fixed top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-900">
       <div className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-xl font-bold text-white tracking-tight">
-          <img src="/lian.svg" alt="SharkLian" className="w-8 h-8" />
+          <Image 
+            src="/lian.svg" 
+            alt="SharkLian" 
+            width={32} 
+            height={32} 
+            className="w-8 h-8"
+            priority 
+          />
           <span className="hidden sm:inline">SharkLian Portfolio.</span>
         </Link>
         
