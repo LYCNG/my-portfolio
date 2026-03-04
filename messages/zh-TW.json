@@ -11,17 +11,46 @@
   "Topbar": {
     "projects": "精選專案",
     "services": "服務項目",
+    "web_design": "網站設計服務",
     "process": "合作流程",
     "hire": "與我合作",
     "contact": "聯絡我"
+  },
+  "WebDesign": {
+    "title": "台南 React 網站開發專家 | 客製化網頁設計",
+    "description": "尋找台南高品質的網站設計？我專精於 React 與 Next.js 開發，為您的企業打造高排名、高效能的現代化網站。",
+    "hero": {
+      "badge": "網頁設計專家",
+      "title": "用 React 打造您的數位門面",
+      "subtitle": "我不只是做網站，我為您建立能在 Google 搜尋結果中脫穎而出的高效能數位資產。",
+      "cta": "免費諮詢方案"
+    },
+    "features": {
+      "seo": { "title": "SEO 搜尋引擎優化", "desc": "透過 Next.js SSR 技術與語意化架構，讓您的網站在 Google 排名更靠前。" },
+      "speed": { "title": "極速效能體驗", "desc": "保證 Google PageSpeed 95+ 分，秒開網頁，留住每一個潛在客戶。" },
+      "design": { "title": "現代化視覺設計", "desc": "拒絕罐頭模板。使用 Tailwind CSS 為您量身打造的 Premium UI/UX 品牌體驗。" }
+    },
+    "why_me": {
+      "title": "為什麼選擇 SharkLian?",
+      "desc": "作為台南在地的資深前端工程師，我將企業級的開發品質帶給在地商家。別再用 WordPress 套版了，您值得更好的。"
+    },
+    "pricing": {
+      "title": "透明化方案",
+      "starter": "形象官網",
+      "business": "企業品牌",
+      "ecommerce": "電商系統"
+    },
+    "faq": {
+      "title": "常見問題"
+    }
   },
   "Hero": {
     "status": "目前開放接收新專案",
     "title_prefix": "資深前端工程師",
     "title_highlight": "(React & TypeScript)",
-    "title_suffix": "| 專精標註工具與後台系統",
-    "intro": "嗨！我是 <name>SharkLian</name>，來自台灣的資深前端工程師。我專注於 <react>React (Vite)</react> 前端架構設計，並具備 <nest>NestJS</nest> 後端開發能力，為企業打造高效能的網頁應用。",
-    "philosophy": "我能根據專案需求靈活運用技術棧：使用 <tailwind>Tailwind CSS</tailwind> 打造高質感的客製化介面，或利用 <antd>Ant Design (AntD)</antd> / <mui>MUI</mui> 快速建構功能強大的企業級後台。",
+    "title_suffix": "",
+    "intro": "嗨！我是 <name>SharkLian</name>，一位專精於 React 與 Next.js 的資深前端工程師 (Frontend Developer)。我致力於打造高效能的 <react>React</react> 現代化網站與高擴展性網頁架構，為企業帶來實質業務增長。同時具備 <nest>NestJS</nest> 全端開發能力，確保前後端 API 完美整合。",
+    "philosophy": "我的開發哲學是將乾淨的程式碼與頂級網頁設計結合。不論是使用 <tailwind>Tailwind CSS</tailwind> 刻劃完美細節的客製化 UI，或是運用 <antd>Ant Design</antd> 與 <mui>MUI</mui> 快速建構複雜的企業級後台系統，我始終專注於 SEO 優化、無障礙設計及卓越的用戶體驗 (UX)。",
     "expertise_title": "我的核心開發經驗包括：",
     "expertise_items": {
       "annotation": {
