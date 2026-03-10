@@ -1,97 +1,95 @@
-# Professional Portfolio Website
+# 🚀 SharkLian Dev - Premium Portfolio
 
-A high-performance, dark-themed personal portfolio website designed for a Senior Full-Stack Engineer. Built with **Next.js 15+ (App Router)**, **Tailwind CSS v4**, and **Framer Motion**, featuring full Internationalization (i18n) support.
+A state-of-the-art, high-performance personal portfolio website built for modern web standards. This project showcases the fusion of **Next.js 15**, **Tailwind CSS v4**, and sophisticated **GSAP** animations, delivering a premium dark-themed experience for tech professionals.
 
-![Project Preview](https://placehold.co/1200x630/0f172a/ffffff?text=Portfolio+Preview)
+![SharkLian Portfolio Preview](https://placehold.co/1200x630/020617/3b82f6?text=SharkLian+Dev+Portfolio+v2.0)
 
-## 🚀 Key Features
+## ✨ Core Features
 
-- **Modern Tech Stack**: Next.js 15, React 19, Tailwind v4, Framer Motion.
-- **Internationalization (i18n)**: Seamless support for English (`en`) and Traditional Chinese (`zh-TW`) using `next-intl`.
-- **Performance First**: Server Components, optimized fonts, and minimal client-side bundles.
-- **Premium UI/UX**:
-  - Dark mode aesthetic with glassmorphism effects.
-  - Sticky **Topbar** with language switcher.
-  - **Hero Section** with dynamic background animations.
-  - **Featured Work** displaying NDA-friendly abstract architecture diagrams.
-  - **Tech Stack** infinite marquee.
-  - **Services** & **Process** showcasing technical expertise.
+- **⚡ Next.js 15 + React 19**: Leveraging the latest App Router patterns and React Server Components.
+- **🎨 Tailwind CSS v4**: Utilizing the cutting-edge utility-first CSS framework for ultra-fast, modern styling.
+- **🎭 GSAP & useGSAP**: High-fidelity entrance animations, stagger effects, and scroll-triggered transitions.
+- **🖱️ Lenis Smooth Scroll**: Silky smooth scrolling across all devices.
+- **🌐 Full Internationalization (i18n)**: Seamless English (`en`) and Traditional Chinese (`zh-TW`) support with `next-intl`.
+- **📫 Integrated Contact System**: Functional contact form powered by **Resend Email API** with project inquiry templates.
+- **📱 True Responsive Design**: Meticulously optimized for Mobile, Tablet, and Desktop layouts.
+- **🔍 SEO Optimized**: Metadata API integration with JSON-LD structured data.
 
 ## 🛠️ Technology Stack
 
-- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Animation**: [Framer Motion](https://www.framer.com/motion/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **i18n**: [next-intl](https://next-intl-docs.vercel.app/)
+| Category      | Technology                                                                    |
+| :------------ | :---------------------------------------------------------------------------- |
+| **Framework** | [Next.js 15](https://nextjs.org/) (App Router)                                |
+| **Language**  | [TypeScript](https://www.typescriptlang.org/)                                 |
+| **Animation** | [GSAP](https://gsap.com/) + [@gsap/react](https://github.com/greensock/react) |
+| **Styling**   | [Tailwind CSS v4](https://tailwindcss.com/)                                   |
+| **Icons**     | [Lucide React](https://lucide.dev/)                                           |
+| **Email**     | [Resend](https://resend.com/)                                                 |
+| **Scroll**    | [Lenis](https://lenis.darkroom.engineering/)                                  |
+| **i18n**      | [next-intl](https://next-intl-docs.vercel.app/)                               |
 
 ## 📂 Project Structure
 
 ```bash
 src/
 ├── app/
-│   ├── [locale]/          # Localized routes (en, zh-TW)
-│   │   ├── layout.tsx     # Root layout with i18n provider
-│   │   └── page.tsx       # Main landing page
-│   └── globals.css        # Global Tailwind v4 styles
-├── components/            # Reusable UI components
-│   ├── ui/                # Base UI elements (Button, etc.)
-│   ├── Hero.tsx           # Home Hero section
-│   ├── Topbar.tsx         # Navigation & Lang switcher
+│   ├── [locale]/          # Multi-language routes
+│   │   ├── about/         # Dedicated About Page
+│   │   ├── contact/       # Contact Information
+│   │   ├── portfolio/     # Full Project List
+│   │   ├── layout.tsx     # Global Layout & Providers
+│   │   └── page.tsx       # Landing Page (Hero, Featured, Experience)
+│   └── globals.css        # Tailwind v4 Global Configurations
+├── components/            # Atomic & Section Components
+│   ├── AboutCTA.tsx       # "Book a call" Section for About
+│   ├── ContactForm.tsx    # Optimized Form with Resend integration
+│   ├── Hero.tsx           # Dynamic Entrance Hero
+│   ├── Topbar.tsx         # Liquid Sticky Navigation
 │   └── ...
-├── i18n/                  # i18n configuration
-│   ├── request.ts         # Request handler
-│   └── routing.ts         # Routing logic
-└── middleware.ts          # i18n Middleware
+├── lib/
+│   └── actions/           # Server Actions (sendEmail.ts)
+└── i18n/                  # Routing & Translation Config
 messages/
-├── en.json                # English translations
-└── zh-TW.json             # Traditional Chinese translations
+├── en.json                # English Translation Catalog
+└── zh-TW.json             # Traditional Chinese Translation Catalog
 ```
 
-## ⚡ Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+
-- npm
+- **Node.js**: 18.x or higher
+- **npm**: 9.x or higher
+- **Resend API Key**: Required for the contact form functionality.
 
 ### Installation
 
-1.  **Clone the repository:**
+1.  **Clone the project:**
 
     ```bash
-    git clone https://github.com/your-username/my-portfolio.git
+    git clone https://github.com/LYCNG/my-portfolio.git
     cd my-portfolio
     ```
 
-2.  **Install dependencies:**
+2.  **Environment Setup**:
+    Create a `.env.local` file in the root directory:
+
+    ```env
+    RESEND_API_KEY=re_your_api_key_here
+    ```
+
+3.  **Install dependencies:**
 
     ```bash
     npm install
     ```
 
-3.  **Run the development server:**
-
+4.  **Launch development server:**
     ```bash
     npm run dev
     ```
 
-4.  **Open your browser:**
-    Navigate to [http://localhost:3000](http://localhost:3000). The site will automatically redirect to your preferred locale (e.g., `/en`).
-
-## 🌍 Internationalization (i18n)
-
-This project uses `next-intl` for routing and translations.
-
-- **Adding a new language:**
-  1.  Update `src/i18n/routing.ts` to include the new locale code.
-  2.  Create a new JSON file in `messages/` (e.g., `es.json`).
-  3.  Restart the dev server.
-
-## 📦 Build & Deploy
-
-To create a production build:
+### Production Build
 
 ```bash
 npm run build
@@ -100,4 +98,8 @@ npm start
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is open-source and available under the **MIT License**.
+
+---
+
+\*Created with ❤️ by **SharkLian Dev\***.
