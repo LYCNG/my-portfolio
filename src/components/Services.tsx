@@ -1,51 +1,122 @@
 "use client";
 
-import { BarChart3, Database, RefreshCw, Layers } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { Monitor, Server, Database } from "lucide-react";
+import { useTranslations, useLocale } from "next-intl";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 export function Services() {
   const t = useTranslations("Services");
+  const locale = useLocale();
+  const container = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      // Set initial states
+      gsap.set(".service-card", { y: 40, opacity: 0 });
+
+      gsap.to(".service-card", {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top 85%",
+          once: true,
+        },
+      });
+
+      const refreshTimer = setTimeout(() => ScrollTrigger.refresh(), 500);
+      return () => clearTimeout(refreshTimer);
+    },
+    { scope: container, dependencies: [locale] },
+  );
 
   const services = [
     {
-      key: "visualization",
-      icon: BarChart3,
+      key: "frontend",
+      icon: Monitor,
+      color: "from-blue-500/20 to-blue-600/5",
+      textColor: "text-blue-400",
     },
     {
-      key: "api",
+      key: "backend",
+      icon: Server,
+      color: "from-purple-500/20 to-purple-600/5",
+      textColor: "text-purple-400",
+    },
+    {
+      key: "database",
       icon: Database,
-    },
-    {
-      key: "legacy",
-      icon: RefreshCw,
+      color: "from-emerald-500/20 to-emerald-600/5",
+      textColor: "text-emerald-400",
     },
   ];
 
   return (
-    <section className="py-24 bg-slate-950 relative ">
+    <section
+      id="services"
+      ref={container}
+      className="py-20 md:py-32 bg-slate-950 relative overflow-hidden"
+    >
       <div className="container mx-auto px-4 md:px-6">
-         <div className="mb-16">
-            <div className="flex items-center gap-2 text-blue-500 mb-4 font-mono text-sm uppercase tracking-wider">
-                <Layers className="w-4 h-4" />
-                <span>{t("label")}</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">{t("title")}</h2>
-            <p className="text-slate-400 max-w-2xl text-lg">
-                {t("description")}
-            </p>
-         </div>
+        <div className="mb-20 text-center max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Core Technology & Services
+          </h2>
+          <div className="h-1.5 w-24 bg-blue-600 mx-auto rounded-full" />
+        </div>
 
-         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-                <div key={index} className="group p-8 rounded-2xl bg-slate-900/40 border border-slate-800 hover:border-slate-700 transition-colors">
-                    <div className="w-12 h-12 rounded-lg bg-slate-800 flex items-center justify-center mb-6 group-hover:bg-blue-600/20 group-hover:text-blue-400 transition-all text-slate-300">
-                        <service.icon className="w-6 h-6" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{t(`items.${service.key}.title`)}</h3>
-                    <p className="text-slate-400 leading-relaxed">{t(`items.${service.key}.desc`)}</p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="service-card group relative p-6 md:p-10 rounded-3xl bg-slate-900/40 border border-white/5 hover:border-white/10 transition-all duration-500"
+            >
+              {/* Card Background Glow */}
+              <div
+                className={`absolute inset-0 bg-linear-to-b ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl`}
+              />
+
+              <div className="relative z-10">
+                <div
+                  className={`w-16 h-16 rounded-2xl bg-slate-800/50 flex items-center justify-center mb-8 ${service.textColor} group-hover:scale-110 group-hover:bg-white/5 transition-all duration-500`}
+                >
+                  <service.icon className="w-8 h-8" />
                 </div>
-            ))}
-         </div>
+
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {t(`${service.key}.title`)}
+                </h3>
+
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {t(`${service.key}.tech`)
+                    .split(",")
+                    .map((item, i) => (
+                      <span
+                        key={i}
+                        className="text-[10px] uppercase tracking-widest font-bold px-2.5 py-1 rounded-md bg-white/5 text-slate-400 border border-white/5 group-hover:border-white/10 transition-colors"
+                      >
+                        {item.trim()}
+                      </span>
+                    ))}
+                </div>
+
+                <p className="text-slate-400 leading-relaxed text-base">
+                  {t(`${service.key}.value`)}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

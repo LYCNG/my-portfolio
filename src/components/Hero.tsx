@@ -1,231 +1,240 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ArrowRight, Monitor, Tablet, Smartphone } from "lucide-react";
-import { FaGithub } from "react-icons/fa";
-import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
-import { TextReveal } from "@/components/TextReveal";
+import { Link, usePathname } from "@/i18n/routing";
+import { Button } from "./ui/button";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ArrowRight, Code2, Sparkles } from "lucide-react";
+import { useLenis } from "lenis/react";
 
 export function Hero() {
   const t = useTranslations("Hero");
+  const pathname = usePathname();
+  const lenis = useLenis();
+  const container = useRef<HTMLDivElement>(null);
+  const codeEditorRef = useRef<HTMLDivElement>(null);
+
+  const handleAnchorClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    if (href.includes("#") && pathname === "/") {
+      e.preventDefault();
+      const targetId = href.includes("#") ? href.split("#")[1] : "";
+      if (targetId) {
+        lenis?.scrollTo(`#${targetId}`, {
+          offset: -80,
+          duration: 1.5,
+        });
+      }
+    }
+  };
+
+  useGSAP(
+    () => {
+      // Intro animations
+      const tl = gsap.timeline();
+      tl.from(".hero-title", {
+        y: 60,
+        opacity: 0,
+        duration: 1,
+        ease: "power4.out",
+      })
+        .from(
+          ".hero-subtitle",
+          {
+            y: 40,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.6",
+        )
+        .from(
+          ".hero-cta",
+          {
+            y: 20,
+            opacity: 0,
+            duration: 0.6,
+            ease: "power2.out",
+            stagger: 0.1,
+          },
+          "-=0.4",
+        )
+        .from(
+          ".hero-visual",
+          {
+            scale: 0.9,
+            opacity: 0,
+            duration: 1.2,
+            ease: "expo.out",
+          },
+          "-=1",
+        );
+
+      // Floating animation for code editor
+      gsap.to(codeEditorRef.current, {
+        y: 20,
+        duration: 3,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+      });
+
+      // Background elements animation
+      gsap.to(".bg-blob", {
+        x: "random(-40, 40)",
+        y: "random(-40, 40)",
+        duration: "random(10, 20)",
+        repeat: -1,
+        yoyo: true,
+        ease: "none",
+        stagger: {
+          each: 2,
+          from: "random",
+        },
+      });
+    },
+    { scope: container },
+  );
 
   return (
-    <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden pt-20">
-      {/* Background Gradients */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
-        <div className="absolute top-[20%] left-[20%] w-96 h-96 bg-blue-500/10 rounded-full blur-[100px]" />
-        <div className="absolute top-[30%] right-[20%] w-72 h-72 bg-purple-500/10 rounded-full blur-[100px]" />
+    <section
+      ref={container}
+      id="top"
+      className="relative min-h-screen flex items-center pt-28 md:pt-32 pb-16 md:pb-20 overflow-hidden bg-slate-950"
+    >
+      {/* Background blobs */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="bg-blob absolute top-[10%] left-[5%] w-[40vw] h-[40vw] bg-blue-600/10 rounded-full blur-[120px]" />
+        <div className="bg-blob absolute bottom-[10%] right-[5%] w-[35vw] h-[35vw] bg-purple-600/10 rounded-full blur-[100px]" />
+        <div className="bg-blob absolute top-[40%] left-[30%] w-[25vw] h-[25vw] bg-blue-400/5 rounded-full blur-[80px]" />
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10 flex flex-col items-center text-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, ease: "backOut" }}
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-slate-400 text-sm mb-8"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-          </span>
-          {t("status")}
-        </motion.div>
-
-        <h1 className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-x-4 gap-y-2 text-[clamp(2.5rem,5vw+1rem,4.5rem)] lg:text-[-clamp(3rem,6vw+1rem,5.5rem)] font-bold tracking-wider leading-[1.1] text-white mb-6 max-w-5xl text-balance">
-          <TextReveal as="span" delay={0.1}>
-            {t("title_prefix")}
-          </TextReveal>
-          <TextReveal
-            as="span"
-            delay={0.3}
-            className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-400"
-          >
-            {t("title_highlight")}
-          </TextReveal>
-        </h1>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl text-balance space-y-6 leading-relaxed"
-        >
-          <p>
-            {t.rich("intro", {
-              name: (chunks: React.ReactNode) => (
-                <span className="font-bold underline underline-offset-4 decoration-blue-500 decoration-2 text-white">
-                  {chunks}
-                </span>
-              ),
-              react: (chunks: React.ReactNode) => (
-                <span className="inline-block px-1.5 py-0.5 mx-1 text-base rounded-md bg-[#61DAFB]/10 text-[#61DAFB] border border-[#61DAFB]/20 font-mono font-bold tracking-tight">
-                  {chunks}
-                </span>
-              ),
-              nest: (chunks: React.ReactNode) => (
-                <span className="inline-block px-1.5 py-0.5 mx-1 text-base rounded-md bg-[#E0234E]/10 text-[#E0234E] border border-[#E0234E]/20 font-mono font-bold tracking-tight">
-                  {chunks}
-                </span>
-              ),
-              ts: (chunks: React.ReactNode) => (
-                <span className="inline-block px-1.5 py-0.5 mx-1 text-base rounded-md bg-[#3178C6]/10 text-[#3178C6] border border-[#3178C6]/20 font-mono font-bold tracking-tight">
-                  {chunks}
-                </span>
-              ),
-            })}
-          </p>
-          <p className="text-slate-400">
-            {t.rich("philosophy", {
-              tailwind: (chunks: React.ReactNode) => (
-                <span className="inline-block px-1.5 py-0.5 mx-1 text-base rounded-md bg-[#38B2AC]/10 text-[#38B2AC] border border-[#38B2AC]/20 font-mono font-bold tracking-tight">
-                  {chunks}
-                </span>
-              ),
-              antd: (chunks: React.ReactNode) => (
-                <span className="inline-block px-1.5 py-0.5 mx-1 text-base rounded-md bg-[#1890FF]/10 text-[#1890FF] border border-[#1890FF]/20 font-mono font-bold tracking-tight">
-                  {chunks}
-                </span>
-              ),
-              mui: (chunks: React.ReactNode) => (
-                <span className="inline-block px-1.5 py-0.5 mx-1 text-base rounded-md bg-[#007FFF]/10 text-[#007FFF] border border-[#007FFF]/20 font-mono font-bold tracking-tight">
-                  {chunks}
-                </span>
-              ),
-            })}
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="w-full max-w-5xl mb-12"
-        >
-          <h3 className="text-white text-lg font-semibold mb-6 text-center opacity-80 uppercase tracking-widest">
-            {t("expertise_title")}
-          </h3>
-          <div className="grid gap-6 md:grid-cols-3 text-left">
-            <div className="group p-6 rounded-2xl bg-slate-900/40 border border-slate-800 hover:border-blue-500/50 hover:bg-slate-900/60 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
-              <div className="text-blue-400 font-bold text-lg mb-2 group-hover:text-blue-300 transition-colors">
-                {t("expertise_items.annotation.title")}
-              </div>
-              <div className="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
-                {t("expertise_items.annotation.desc")}
-              </div>
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col items-center text-center lg:items-start lg:text-left space-y-8">
+            <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium hero-cta">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>{t("greeting")}</span>
             </div>
-            <div className="group p-6 rounded-2xl bg-slate-900/40 border border-slate-800 hover:border-purple-500/50 hover:bg-slate-900/60 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
-              <div className="text-purple-400 font-bold text-lg mb-2 group-hover:text-purple-300 transition-colors">
-                {t("expertise_items.ai.title")}
-              </div>
-              <div className="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
-                {t("expertise_items.ai.desc")}
-              </div>
-            </div>
-            <div className="group p-6 rounded-2xl bg-slate-900/40 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-900/60 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/10">
-              <div className="text-emerald-400 font-bold text-lg mb-2 group-hover:text-emerald-300 transition-colors">
-                {t("expertise_items.admin.title")}
-              </div>
-              <div className="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
-                {t("expertise_items.admin.desc")}
-              </div>
+
+            <h1 className="hero-title text-4xl md:text-7xl font-bold tracking-tight text-white leading-[1.1]">
+              {t("h1")}
+            </h1>
+
+            <p className="hero-subtitle text-lg md:text-xl text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              {t("h2")}
+            </p>
+
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+              <Button
+                size="lg"
+                className="hero-cta rounded-full bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 h-14 text-lg group"
+                asChild
+              >
+                <Link
+                  href="/#contact"
+                  onClick={(e) => handleAnchorClick(e, "/#contact")}
+                >
+                  {t("cta_primary")}
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Button>
             </div>
           </div>
-        </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-lg text-slate-300 font-medium mb-10 max-w-2xl italic"
-        >
-          "{t("closing")}"
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
-        >
-          <Button size="lg" className="rounded-full group" asChild>
-            <a href="#projects">
-              {t("cta_projects")}
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </a>
-          </Button>
-          <Button variant="outline" size="lg" className="rounded-full" asChild>
-            <a
-              href="https://github.com/LYCNG/my-portfolio"
-              target="_blank"
-              rel="noopener noreferrer"
+          <div className="hero-visual relative flex justify-center lg:justify-end">
+            {/* Abstract Design Element: Code Editor Mockup */}
+            <div
+              ref={codeEditorRef}
+              className="relative w-full max-w-[500px] aspect-4/3 rounded-2xl border border-white/10 bg-slate-900/50 backdrop-blur-3xl p-6 shadow-2xl flex flex-col"
             >
-              <FaGithub className="mr-2 w-4 h-4" />
-              {t("cta_code")}
-            </a>
-          </Button>
-        </motion.div>
+              {/* Editor Header */}
+              <div className="flex items-center gap-2 mb-6">
+                <div className="w-3 h-3 rounded-full bg-red-500/50" />
+                <div className="w-3 h-3 rounded-full bg-amber-500/50" />
+                <div className="w-3 h-3 rounded-full bg-emerald-500/50" />
+                <div className="ml-2 flex items-center gap-2 text-xs text-slate-500 font-mono">
+                  <Code2 className="w-3.5 h-3.5" />
+                  <span>portfolio-v2.tsx</span>
+                </div>
+              </div>
 
-        {/* Feature Visual: RWD Capability */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="mt-20 w-full max-w-5xl h-64 md:h-96 rounded-t-3xl border-t border-l border-r border-slate-800 bg-slate-900/50 backdrop-blur-sm relative overflow-hidden group"
-        >
-          <div className="absolute inset-0 flex flex-col items-center justify-center">
-            <div className="flex items-end gap-4 md:gap-8 mb-6">
-              {/* Desktop */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7 }}
-                className="flex flex-col items-center gap-3"
-              >
-                <Monitor className="w-16 h-16 md:w-24 md:h-24 text-slate-700/50 group-hover:text-blue-500/80 transition-colors duration-500" />
-                <div className="h-1 w-12 md:w-20 bg-slate-800 rounded-full group-hover:bg-blue-500/50 transition-colors duration-500" />
-              </motion.div>
+              {/* Editor Content (Mockup Code) */}
+              <div className="flex-1 font-mono text-sm space-y-3 overflow-hidden">
+                <div className="flex gap-4">
+                  <span className="text-slate-600 select-none">1</span>
+                  <p className="text-purple-400">
+                    const <span className="text-blue-400">SharkLian</span> ={" "}
+                    {"{"}
+                  </p>
+                </div>
+                <div className="flex gap-4 pl-4">
+                  <span className="text-slate-600 select-none">2</span>
+                  <p className="text-slate-300">
+                    role:{" "}
+                    <span className="text-emerald-400">
+                      "Full-Stack Engineer"
+                    </span>
+                    ,
+                  </p>
+                </div>
+                <div className="flex gap-4 pl-4">
+                  <span className="text-slate-600 select-none">3</span>
+                  <p className="text-slate-300">
+                    experience:{" "}
+                    <span className="text-amber-400">"5 Years"</span>,
+                  </p>
+                </div>
+                <div className="flex gap-4 pl-4">
+                  <span className="text-slate-600 select-none">4</span>
+                  <p className="text-slate-300">stack: [</p>
+                </div>
+                <div className="flex gap-4 pl-8">
+                  <span className="text-slate-600 select-none">5</span>
+                  <p className="text-emerald-400">
+                    "React", "Node.js", "TypeScript"
+                  </p>
+                </div>
+                <div className="flex gap-4 pl-4">
+                  <span className="text-slate-600 select-none">6</span>
+                  <p className="text-slate-300">],</p>
+                </div>
+                <div className="flex gap-4 pl-4">
+                  <span className="text-slate-600 select-none">7</span>
+                  <p className="text-blue-400">
+                    transform:{" "}
+                    <span className="text-purple-400">(logic) =&gt; {"{"}</span>
+                  </p>
+                </div>
+                <div className="flex gap-4 pl-8">
+                  <span className="text-slate-600 select-none">8</span>
+                  <p className="text-purple-400">
+                    return{" "}
+                    <span className="text-white">
+                      SeamlessExperience(logic)
+                    </span>
+                  </p>
+                </div>
+                <div className="flex gap-4 pl-4">
+                  <span className="text-slate-600 select-none">9</span>
+                  <p className="text-purple-400">{"}"}</p>
+                </div>
+                <div className="flex gap-4">
+                  <span className="text-slate-600 select-none">10</span>
+                  <p className="text-purple-400">{"}"}</p>
+                </div>
+              </div>
 
-              {/* Tablet */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 }}
-                className="flex flex-col items-center gap-2"
-              >
-                <Tablet className="w-12 h-12 md:w-16 md:h-16 text-slate-700/50 group-hover:text-purple-500/80 transition-colors duration-500" />
-                <div className="h-1 w-8 md:w-12 bg-slate-800 rounded-full group-hover:bg-purple-500/50 transition-colors duration-500" />
-              </motion.div>
-
-              {/* Mobile */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.9 }}
-                className="flex flex-col items-center gap-1"
-              >
-                <Smartphone className="w-8 h-8 md:w-10 md:h-10 text-slate-700/50 group-hover:text-emerald-500/80 transition-colors duration-500" />
-                <div className="h-1 w-4 md:w-6 bg-slate-800 rounded-full group-hover:bg-emerald-500/50 transition-colors duration-500" />
-              </motion.div>
+              {/* Decorative side elements */}
+              <div className="absolute -top-10 -right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse" />
+              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
             </div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1 }}
-              className="px-6 py-2 rounded-full bg-slate-950/80 border border-slate-800 text-slate-300 font-mono text-sm md:text-base backdrop-blur-md"
-            >
-              {t("rwd_capability")}
-            </motion.div>
           </div>
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-slate-950 to-transparent" />
-
-          <div className="absolute top-8 left-8 flex gap-2">
-            <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50" />
-            <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50" />
-            <div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50" />
-          </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

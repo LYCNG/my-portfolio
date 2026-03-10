@@ -1,155 +1,135 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ArrowUpRight, Monitor, Smartphone } from "lucide-react";
+import { useRef } from "react";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "./ui/button";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 export function FeaturedWork() {
-  const t = useTranslations("FeaturedWork");
+  const t = useTranslations("FeaturedProjects");
+  const locale = useLocale();
+  const container = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      gsap.set(".project-card", { y: 60, opacity: 0 });
+
+      gsap.to(".project-card", {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.3,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top 80%",
+          once: true,
+        },
+      });
+
+      const refreshTimer = setTimeout(() => ScrollTrigger.refresh(), 500);
+      return () => clearTimeout(refreshTimer);
+    },
+    { scope: container, dependencies: [locale] },
+  );
 
   const projects = [
     {
-      key: "annotation",
-      image: "/projects/annotation-studio.png",
-      url: "https://sharklian-annotiation-studio.vercel.app/",
-      tags: ["React", "Material-UI", "Vite", "Konva"],
-      responsive: false,
+      key: "project_a",
+      image: "/projects/annotation-studio.png", // Keep existing or placeholder
+      tags: ["React", "Konva.js", "TypeScript", "NestJS", "PostgreSQL"],
     },
     {
-      key: "intelligence",
-      image: "/projects/shark-intelligence.png",
-      url: "https://shark-lian-intelligence.vercel.app/",
-      tags: ["React", "TypeScript", "Tailwind CSS", "i18n","Ant Design"],
-      responsive: true,
-    },{
-      key: "art",
-      image: "/projects/project-preview.png",
-      url: "https://art-gallery-brown.vercel.app/",
-      tags: ["React", "TypeScript", "Tailwind CSS", "framer-motion"],
-      responsive: true,
-    }
+      key: "project_b",
+      image: "/projects/shark-intelligence.png", // Keep existing or placeholder
+      tags: ["Next.js", "Tailwind CSS", "Express.js", "SQL"],
+    },
   ];
 
   return (
-    <section className="py-24 bg-slate-950 border-t border-slate-900" id="projects">
+    <section
+      ref={container}
+      className="py-20 md:py-32 bg-slate-950 border-t border-white/5"
+      id="projects"
+    >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div>
-            <span className="text-purple-500 font-mono text-sm uppercase tracking-wider mb-2 block">{t("label")}</span>
-            <h2 className="text-3xl md:text-5xl font-bold text-white">{t("title")}</h2>
-          </div>
+        <div className="mb-20 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Featured Projects
+          </h2>
+          <div className="h-1.5 w-24 bg-blue-600 mx-auto rounded-full" />
         </div>
 
-        <div className="grid gap-8">
+        <div className="space-y-20 lg:space-y-32">
           {projects.map((project, i) => (
-            <motion.div
+            <div
               key={project.key}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group relative grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden rounded-2xl border border-slate-800 bg-slate-900/40 hover:border-blue-500/50 transition-all duration-300"
+              className={`project-card group flex flex-col ${i % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 lg:gap-20 items-center`}
             >
-              {/* Left: Screenshot */}
-              <div className="relative h-64 lg:h-auto bg-slate-900 overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={t(`projects.${project.key}.title`)}
-                  fill
-                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-transparent to-transparent" />
-
-                {/* Platform Badge */}
-                <div className={`absolute top-4 left-4 flex items-center gap-2 text-xs font-mono bg-slate-950/80 px-3 py-1.5 rounded-full border ${project.responsive ? 'text-green-400 border-green-500/30' : 'text-slate-300 border-slate-700'}`}>
-                  {project.responsive ? (
-                    <>
-                      <Smartphone className="w-3.5 h-3.5" />
-                      {t("responsive")}
-                    </>
-                  ) : (
-                    <>
-                      <Monitor className="w-3.5 h-3.5" />
-                      {t("desktop_only")}
-                    </>
-                  )}
+              {/* Image Side */}
+              <div className="w-full lg:w-1/2 relative">
+                <div className="relative aspect-16/10 overflow-hidden rounded-3xl border border-white/10 bg-slate-900 shadow-2xl transition-all duration-500 group-hover:border-blue-500/30 group-hover:shadow-blue-500/10">
+                  <Image
+                    src={project.image}
+                    alt={t(`${project.key}.title`)}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-slate-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
+                {/* Decorative blob behind image */}
+                <div
+                  className={`absolute -z-10 w-64 h-64 blur-[100px] rounded-full opacity-20 ${i % 2 === 0 ? "-left-10 -top-10 bg-blue-500" : "-right-10 -bottom-10 bg-purple-500"}`}
+                />
               </div>
 
-              {/* Right: Content */}
-              <div className="p-8 lg:p-12 flex flex-col justify-center">
-                <div className="mb-4 flex items-center justify-between">
-                  <span className="text-blue-400 text-sm font-medium">{t(`projects.${project.key}.category`)}</span>
+              {/* Text Side */}
+              <div className="w-full lg:w-1/2 space-y-6">
+                <div className="space-y-2">
+                  <span className="text-blue-400 font-bold text-sm tracking-widest uppercase">
+                    {t(`${project.key}.type`)}
+                  </span>
+                  <h3 className="text-3xl md:text-4xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                    {t(`${project.key}.title`)}
+                  </h3>
                 </div>
-                
-                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 group-hover:text-blue-200 transition-colors">
-                  {t(`projects.${project.key}.title`)}
-                </h3>
-                
-                <p className="text-slate-400 mb-8 leading-relaxed">
-                  {t(`projects.${project.key}.desc`)}
+
+                <p className="text-slate-400 leading-relaxed text-lg">
+                  {t(`${project.key}.desc`)}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-8">
+                <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="px-3 py-1 rounded-full text-xs font-medium bg-slate-800 text-slate-300 border border-slate-700">
+                    <span
+                      key={tag}
+                      className="px-3 py-1 rounded-full text-xs font-bold bg-white/5 text-slate-300 border border-white/10"
+                    >
                       {tag}
                     </span>
                   ))}
                 </div>
-
-                <div>
-                  <Button asChild className="group/btn">
-                    <a href={project.url} target="_blank" rel="noopener noreferrer">
-                      {t("view_demo")}
-                      <ArrowUpRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                    </a>
-                  </Button>
+                <div className="space-y-3 py-4">
+                  <div className="flex items-center gap-3 text-slate-200 font-medium">
+                    <CheckCircle2 className="w-5 h-5 text-blue-500" />
+                    <span>{t(`${project.key}.achievement_1`)}</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-slate-200 font-medium">
+                    <CheckCircle2 className="w-5 h-5 text-blue-500" />
+                    <span>{t(`${project.key}.achievement_2`)}</span>
+                  </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
-
-        {/* More Coming Soon - Animated Placeholder */}
-        <motion.div 
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="mt-8 w-full min-h-[280px] rounded-2xl border border-dashed border-slate-800 bg-slate-900/20 flex flex-col items-center justify-center relative overflow-hidden group"
-        >
-          {/* Animated Background Pattern */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.05)_50%,transparent_75%,transparent_100%)] bg-size-[250%_250%,100%_100%] animate-[shimmer_3s_infinite_linear]" />
-          </div>
-
-          <div className="relative z-10 flex flex-col items-center text-center p-8">
-            <motion.div 
-              animate={{ 
-                rotate: [0, 5, -5, 0],
-                y: [0, -3, 0]
-              }}
-              transition={{ 
-                duration: 4, 
-                repeat: Infinity,
-                ease: "easeInOut" 
-              }}
-              className="w-16 h-16 rounded-xl bg-slate-800 border-2 border-slate-700 flex items-center justify-center mb-6 shadow-xl relative"
-            >
-              <div className="w-8 h-8 rounded bg-slate-700 flex items-center justify-center">
-                <div className="w-4 h-4 rounded-sm bg-slate-600" />
-              </div>
-              <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-yellow-500 flex items-center justify-center animate-bounce">
-                <div className="w-1.5 h-1.5 bg-slate-950 rounded-full" />
-              </div>
-            </motion.div>
-
-            <p className="text-slate-400 font-mono text-sm">{t("more_coming")}</p>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

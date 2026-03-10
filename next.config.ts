@@ -5,6 +5,14 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   /* config options here */
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+  },
   // For LAN testing, run: npm run dev -- -H 0.0.0.0
   // Then access via your local IP (check with ipconfig/ifconfig)
   devIndicators: {

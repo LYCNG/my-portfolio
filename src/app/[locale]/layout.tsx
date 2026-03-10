@@ -6,6 +6,7 @@ import { Topbar } from "@/components/Topbar";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { CustomCursor } from "@/components/CustomCursor";
 import { SectionNav } from "@/components/SectionNav";
+import { Footer } from "@/components/Footer";
 import "../globals.css";
 
 import { getTranslations } from "next-intl/server";
@@ -69,7 +70,8 @@ export default async function RootLayout({
             <CustomCursor />
             <SectionNav />
             <Topbar />
-            <main className="pt-16">{children}</main>
+            <main className="pt-16 min-h-[calc(100vh-80px)]">{children}</main>
+            <Footer />
           </SmoothScroll>
         </NextIntlClientProvider>
 

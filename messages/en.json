@@ -1,160 +1,169 @@
 {
   "Metadata": {
-    "title": "SharkLian Portfolio | Senior React Developer & Frontend Freelancer",
-    "description": "Professional React Developer helping businesses build scalable web apps. Specializing in Frontend Contracting, React/Next.js Architecture, and Admin Panels.",
-    "keywords": "Frontend Freelance, React Developer, React Contractor, Web Development Services, Next.js Expert, Frontend Architecture, Remote Frontend Engineer",
+    "title": "SharkLian Dev | Senior Full-Stack Engineer Portfolio",
+    "description": "Full-Stack Engineer with 5 years of proven experience (React & Node.js). Specializing in highly interactive frontends and robust API architectures.",
+    "keywords": "Full-Stack Engineer, React, Node.js, TypeScript, Next.js, Web Development, Freelance",
     "og": {
-      "title": "SharkLian Portfolio | Senior React Developer & Frontend Freelancer",
-      "description": "Looking for a React Developer? I provide top-tier Frontend Freelance services using React, Next.js & TypeScript."
+      "title": "SharkLian Dev | Transforming Complex Logic into Seamless Experiences",
+      "description": "Transforming Complex Business Logic into Seamless Digital Experiences."
     }
   },
   "Topbar": {
-    "projects": "Projects",
+    "home": "Home",
+    "web_design": "Design",
     "services": "Services",
-    "web_design": "Web Design",
+    "projects": "Projects",
+    "about": "About",
+    "workflow": "Workflow",
     "process": "Process",
-    "hire": "Work With Me",
-    "contact": "Contact"
-  },
-  "WebDesign": {
-    "title": "React Website Expert in Tainan | Custom Web Design",
-    "description": "Top-tier React & Next.js web development in Tainan. I build high-performance, SEO-optimized websites for businesses.",
-    "hero": {
-      "badge": "Web Design Expert",
-      "title": "Build Your Digital Presence with a React Specialist",
-      "subtitle": "I don't just build websites; I build high-performance digital assets that rank on Google.",
-      "cta": "Get a Free Consultation"
-    },
-    "features": {
-      "seo": { "title": "SEO Optimized", "desc": "Rank higher with clean semantic HTML and Next.js SSR technology." },
-      "speed": { "title": "Blazing Fast", "desc": "95+ Google PageSpeed score guaranteed. Keep your visitors engaged." },
-      "design": { "title": "Modern Design", "desc": "No templates. Premium Custom UI/UX tailored to your brand using Tailwind CSS." }
-    },
-    "why_me": {
-      "title": "Why Choose SharkLian?",
-      "desc": "As a Senior Frontend Developer based in Tainan, I bring enterprise-grade quality to local businesses. Stop using WordPress templates."
-    },
-    "pricing": {
-      "title": "Transparent Pricing",
-      "starter": "Starter Site",
-      "business": "Business Growth",
-      "ecommerce": "E-commerce"
-    },
-    "faq": {
-      "title": "FAQ"
-    }
+    "book_call": "Book a Call",
+    "hire": "Hire Me",
+    "lang": "EN"
   },
   "Hero": {
-    "status": "Currently available for new projects",
-    "title_prefix": "Senior Frontend Developer",
-       "title_highlight": "(React & TypeScript)",
-    "title_suffix": "",
-    "intro": "Hi, I’m <name>SharkLian</name>, a Senior Frontend Developer & React/Next.js Expert based in Taiwan. I specialize in building high-performance <react>React</react> applications and scalable web architectures, delivering custom solutions that drive business growth. With <nest>NestJS</nest> full-stack capabilities, I ensure seamless API integration.",
-    "philosophy": "My approach combines clean code with premium web design. Whether crafting pixel-perfect interfaces with <tailwind>Tailwind CSS</tailwind> or developing complex enterprise dashboards using <antd>Ant Design</antd> & <mui>MUI</mui>, I focus on SEO, accessibility, and exceptional user experience (UX).",
-    "expertise_title": "My expertise includes:",
-    "expertise_items": {
-      "annotation": {
-        "title": "Interactive Annotation Interfaces",
-        "desc": "Precise 2D image labeling tools (Canvas/SVG) for AI workflows."
-      },
-      "ai": {
-        "title": "AI Parameter Tuning Platforms",
-        "desc": "Managing real-time states with Zustand/Redux."
-      },
-      "admin": {
-        "title": "Enterprise Admin Panels",
-        "desc": "Streamlining data workflows and permission management."
-      }
-    },
-    "closing": "My coding style is like a shark—clean, efficient, and precise. If you need a robust internal tool, I deliver solutions that work.",
-    "cta_projects": "View Projects",
-    "cta_code": "Check Code Quality",
-    "rwd_capability": "Expert in Responsive Design Templates (Desktop · Tablet · Mobile)"
+    "greeting": "Hi, I'm SharkLian.",
+    "h1": "Transforming Complex Business Logic into Seamless Digital Experiences.",
+    "h2": "Full-Stack Engineer with 5 years of proven experience (React & Node.js). Specializing in highly interactive frontends, robust API architectures, and scalable database design to build modern solutions for your business.",
+    "cta_primary": "Start Your Project"
   },
   "Services": {
-    "label": "Services",
-    "title": "Technically Challenging Work Only.",
-    "description": "I don't build simple brochure websites. I build the engines that run your business.",
-    "items": {
-      "visualization": {
-        "title": "Complex Data Visualization",
-        "desc": "Transforming raw analytics into interactive, decision-making dashboards using D3.js and Recharts."
-      },
-      "api": {
-        "title": "Scalable API Architecture",
-        "desc": "Designing high-concurrency Node.js/NestJS backends that handle 50k+ requests per second."
-      },
-      "legacy": {
-        "title": "Legacy System Refactoring",
-        "desc": "Modernizing monolithic codebases into modular micro-frontends without downtime."
-      }
-    }
-  },
-  "FeaturedWork": {
-    "label": "Featured Work",
-    "title": "Project Showcase",
-    "view_demo": "View Demo",
-    "desktop_only": "Desktop Only",
-    "responsive": "Desktop & Mobile",
-    "more_coming": "More projects coming soon...",
-    "projects": {
-      "annotation": {
-        "category": "AI / Computer Vision Tool",
-        "title": "Image Annotation Platform",
-        "desc": "A professional-grade image annotation tool designed for AI and computer vision workflows. Features drag-and-drop batch upload, precision labeling tools, and an intuitive dark-mode interface optimized for extended use.",
-        "tags": ["React", "Material-UI", "Vite", "Canvas API"]
-      },
-      "intelligence": {
-        "category": "E-commerce & Management Dashboard",
-        "title": "Shark Intelligence",
-        "desc": "A dual-mode retail platform featuring Customer Mode for shopping and checkout, plus Manager Mode with a War Room for real-time analytics and inventory management. Includes dark/light theme and multi-language support.",
-        "tags": ["React", "TypeScript", "Tailwind CSS", "i18n"]
-      },
-      "art": {
-        "category": "Creative Coding / Art",
-        "title": "ArtSide Gallery",
-        "desc": "A high-end digital art gallery featuring interactive animations and bioluminescent design.",
-        "tags": ["React", "TypeScript", "Tailwind CSS", "framer-motion"]
-      }
-    }
-  },
-  "HireMe": {
-    "title": "Work With Me",
-    "desc": "I am available for freelance projects and contract work. Connect with me on these platforms:",
-    "platforms": {
-      "upwork": "Upwork",
-      "glints": "Glints",
-      "fiverr": "Fiverr"
+    "frontend": {
+      "title": "Frontend Engineering & Interactive Design",
+      "tech": "React.js, TypeScript, Tailwind CSS, State Management (Redux/Zustand)",
+      "value": "Building high-performance Single Page Applications (SPAs). Focused on responsive design, Core Web Vitals optimization, and complex state management for a flawless user experience."
     },
-    "cta": "View Profile"
+    "backend": {
+      "title": "Backend Architecture & API Development",
+      "tech": "NestJS, Express.js, RESTful API, Node.js",
+      "value": "Designing secure and maintainable server architectures. Experienced in microservices concepts, Role-Based Access Control (RBAC), and seamless third-party integrations."
+    },
+    "database": {
+      "title": "Database Design & System Deployment",
+      "tech": "SQL (PostgreSQL/MySQL), Git, Docker (Optional)",
+      "value": "Rigorous relational database normalization to ensure data integrity and query performance. Utilizing Git for stable and transparent development and delivery workflows."
+    }
   },
-  "TechStack": {
-    "title": "Powering Next-Gen Applications with"
+  "FeaturedProjects": {
+    "project_a": {
+      "title": "Advanced Image Annotation Tool",
+      "type": "Full-Stack Development",
+      "tech": "React, Konva.js, TypeScript, NestJS, PostgreSQL",
+      "desc": "A high-performance image processing tool built for enterprise clients. The frontend leverages Konva.js for complex 2D canvas rendering, layer management, and polygon coordinate calculations, overcoming traditional DOM performance bottlenecks. The NestJS backend provides a robust REST API for handling massive coordinate data storage and authorization.",
+      "achievement_1": "Support over 1000 annotation objects per image without lag.",
+      "achievement_2": "Reduced manual labor time by 40% for clients."
+    },
+    "project_b": {
+      "title": "Custom Admin Dashboard",
+      "type": "System Refactoring & Feature Development",
+      "tech": "React (Next.js), Tailwind CSS, Express.js, SQL",
+      "desc": "Took over and refactored legacy system technical debt. Introduced a modern React architecture with strict TypeScript typing, redesigned the database Schema to resolve slow query issues, and built visual operational data dashboards, significantly improving the management team's decision-making efficiency.",
+      "achievement_1": "API response speed improved by 300%.",
+      "achievement_2": "Successfully implemented Dark Mode and multi-language support (i18n)."
+    }
   },
-  "AboutProcess": {
-    "title": "How I Work",
-    "description": "Software development is a team sport. Here is my playbook.",
-    "steps": {
-      "discovery": {
-        "title": "Discovery & Strategy",
-        "desc": "We analyze your business goals, user needs, and technical constraints to define the perfect solution."
+  "Workflow": {
+    "step_1": {
+      "title": "Discovery & Scoping",
+      "desc": "Deeply understand your business goals, producing clear Specification Requirements (SRS) and technical proposals."
+    },
+    "step_2": {
+      "title": "Architecture Design",
+      "desc": "Determine the most suitable technology stack (React + Node.js ecosystem), planning API specs and database structures."
+    },
+    "step_3": {
+      "title": "Agile Development",
+      "desc": "Iterative development with regular progress demos to ensure project direction is precise."
+    },
+    "step_4": {
+      "title": "Testing & Delivery",
+      "desc": "Rigorous code reviews and performance testing, delivering high-quality source code and deployment documentation."
+    }
+  },
+  "About": {
+    "title": "About Me",
+    "content": "With nearly 5 years of industry experience, I specialize in building efficient and intuitive digital product interfaces for enterprises. I am dedicated to constructing highly stable and scalable enterprise-grade systems; from refactoring legacy administration backends to developing high-complexity interactive interfaces, I precisely manage development needs across various fields, delivering solutions that balance quality and performance.",
+    "cta": "Get in Touch",
+    "hero_title": "Focused on creating\nexceptional digital experiences",
+    "hero_subtitle": "As a frontend-originating full-stack engineer, I understand that visual presentation is as crucial as underlying architecture. I strive to strike the perfect balance between performance, maintainability, and user experience.",
+    "stats_experience": "Years Experience",
+    "stats_projects": "Projects Delivered",
+    "stats_satisfaction": "Client Satisfaction",
+    "skills_title": "Technical Expertise",
+    "frontend_title": "Frontend Development",
+    "frontend_desc": "Building smooth, responsive, and highly interactive user interfaces",
+    "backend_title": "Backend Architecture",
+    "backend_desc": "Designing robust, secure, and scalable API services",
+    "tools_title": "Tools & Deployment",
+    "tools_desc": "Modern development workflows and environment setup",
+    "cta_title": "Ready to bring your ideas to life?",
+    "cta_desc": "Let's collaborate to build a high-quality digital product that stands out."
+  },
+  "ContactForm": {
+    "title": "Let's build something together",
+    "fields": {
+      "name": {
+        "label": "Your Name",
+        "placeholder": "What should I call you?"
       },
-      "architecture": {
-        "title": "System Architecture",
-        "desc": "I design scalable database schemas and API patterns before writing a single line of code."
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Where can I reach you?"
       },
-      "development": {
-        "title": "Agile Development",
-        "desc": "Iterative sprints with regular demos. You see progress every week, not just at the deadline."
+      "subject": {
+        "label": "What are you looking for?",
+        "options": [
+          "Web Development",
+          "UI/UX Design",
+          "API Integration",
+          "Consultation"
+        ]
       },
-      "deployment": {
-        "title": "Fast Deployment",
-        "desc": "Streamlined build and deployment processes for rapid delivery to production."
+      "budget": {
+        "label": "Desired Budget",
+        "placeholder": "E.g. $2,000 - $5,000"
+      },
+      "time": {
+        "label": "Expected Timeline",
+        "placeholder": "How soon do you need it?"
+      },
+      "description": {
+        "label": "Project Brief",
+        "placeholder": "Tell me a bit about your goals and ideas..."
+      }
+    },
+    "submit": "Send Message",
+    "success": "Message sent successfully! I'll get back to you soon.",
+    "error": "Oops! Something went wrong. Please try again or email me directly."
+  },
+  "Experience": {
+    "years": "5+ Years Experience",
+    "title": "Experience & Highlights",
+    "role": "Full-Stack Engineer",
+    "items": {
+      "ai_panel": {
+        "title": "AI Data Analytics Dashboard",
+        "desc": "Participated in product architecture and core frontend development from scratch. Built highly interactive data visualization interfaces using Vue3 + ECharts, supporting drag-and-drop customized layouts and real-time AI data streaming via WebSocket with update latency under 100ms."
+      },
+      "eip": {
+        "title": "Enterprise Information Portal (EIP)",
+        "desc": "Responsible for refactoring legacy internal systems. Introduced Vite and Tailwind CSS, solving slow compilation issues (reduced time by 80%). Established robust global state management using Pinia to handle complex Role-Based Access Control (RBAC)."
+      },
+      "revenue": {
+        "title": "Revenue & Accounting System",
+        "desc": "Collaborated deeply with the backend to handle massive cash flow report data. Introduced Virtual Scrolling technology to the frontend, ensuring tables with tens of thousands of records maintain a smooth 60fps scroll, resolving long-standing performance pain points for the business team."
+      },
+      "annotation": {
+        "title": "Advanced Image Annotation Tool",
+        "desc": "Built high-performance frontend image processing for enterprise clients. Abandoned traditional DOM, entirely adopting Canvas (Konva.js) rendering. Supports real-time dragging, scaling, and coordinate calculation of thousands of polygon label objects without lag."
+      },
+      "custom": {
+        "title": "Custom Project Development & Deployment",
+        "desc": "Handled not only frontend logic but also Node.js (Express/NestJS) API development. Capable of independent work, managing everything from database design and third-party API integration to the final Docker containerization deployment process."
       }
     }
   },
   "Footer": {
-    "title": "SharkLian Portfolio.",
-    "copyright": "© {year} Senior Full-Stack Engineer."
+    "title": "SharkLian Dev",
+    "copyright": "© {year} SharkLian Dev. All rights reserved."
   }
 }

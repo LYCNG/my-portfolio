@@ -1,160 +1,169 @@
 {
   "Metadata": {
-    "title": "SharkLian Portfolio | 資深 React 前端工程師 (前端接案/專案開發)",
-    "description": "提供高品質的前端接案服務。專精於 React、Next.js 與 TypeScript 網站開發。我是 SharkLian，一位重視效能與架構的 React Developer，協助企業打造圖像標註工具與企業級後台系統。",
-    "keywords": "前端接案, React接案, React Developer, 前端工程師, 網頁外包, Next.js 開發, 網站透過, 軟體接案",
+    "title": "SharkLian Dev | 資深全端工程師 Portfolio",
+    "description": "擁有 5 年實戰經驗的全端工程師 (React & Node.js)。專注於高互動性前端開發、穩健的 API 架構與資料庫設計。",
+    "keywords": "全端工程師, React, Node.js, TypeScript, Next.js, 網頁開發, 接案",
     "og": {
-      "title": "SharkLian Portfolio | 資深 React 前端工程師 (前端接案专家)",
-      "description": "尋找專業的 React Developer？提供高品質前端接案服務。精通 React, Next.js & TypeScript。"
+      "title": "SharkLian Dev | Transforming Complex Logic into Seamless Experiences",
+      "description": "將複雜的商業邏輯，轉化為極致流暢的數位體驗。"
     }
   },
   "Topbar": {
+    "home": "首頁",
+    "web_design": "網頁設計",
+    "services": "專業服務",
     "projects": "精選專案",
-    "services": "服務項目",
-    "web_design": "網站設計服務",
-    "process": "合作流程",
-    "hire": "與我合作",
-    "contact": "聯絡我"
-  },
-  "WebDesign": {
-    "title": "台南 React 網站開發專家 | 客製化網頁設計",
-    "description": "尋找台南高品質的網站設計？我專精於 React 與 Next.js 開發，為您的企業打造高排名、高效能的現代化網站。",
-    "hero": {
-      "badge": "網頁設計專家",
-      "title": "用 React 打造您的數位門面",
-      "subtitle": "我不只是做網站，我為您建立能在 Google 搜尋結果中脫穎而出的高效能數位資產。",
-      "cta": "免費諮詢方案"
-    },
-    "features": {
-      "seo": { "title": "SEO 搜尋引擎優化", "desc": "透過 Next.js SSR 技術與語意化架構，讓您的網站在 Google 排名更靠前。" },
-      "speed": { "title": "極速效能體驗", "desc": "保證 Google PageSpeed 95+ 分，秒開網頁，留住每一個潛在客戶。" },
-      "design": { "title": "現代化視覺設計", "desc": "拒絕罐頭模板。使用 Tailwind CSS 為您量身打造的 Premium UI/UX 品牌體驗。" }
-    },
-    "why_me": {
-      "title": "為什麼選擇 SharkLian?",
-      "desc": "作為台南在地的資深前端工程師，我將企業級的開發品質帶給在地商家。別再用 WordPress 套版了，您值得更好的。"
-    },
-    "pricing": {
-      "title": "透明化方案",
-      "starter": "形象官網",
-      "business": "企業品牌",
-      "ecommerce": "電商系統"
-    },
-    "faq": {
-      "title": "常見問題"
-    }
+    "about": "關於我",
+    "workflow": "工作流程",
+    "process": "開發流程",
+    "book_call": "預約諮詢",
+    "hire": "合作洽談",
+    "lang": "繁中"
   },
   "Hero": {
-    "status": "目前開放接收新專案",
-    "title_prefix": "資深前端工程師",
-    "title_highlight": "(React & TypeScript)",
-    "title_suffix": "",
-    "intro": "嗨！我是 <name>SharkLian</name>，一位專精於 React 與 Next.js 的資深前端工程師 (Frontend Developer)。我致力於打造高效能的 <react>React</react> 現代化網站與高擴展性網頁架構，為企業帶來實質業務增長。同時具備 <nest>NestJS</nest> 全端開發能力，確保前後端 API 完美整合。",
-    "philosophy": "我的開發哲學是將乾淨的程式碼與頂級網頁設計結合。不論是使用 <tailwind>Tailwind CSS</tailwind> 刻劃完美細節的客製化 UI，或是運用 <antd>Ant Design</antd> 與 <mui>MUI</mui> 快速建構複雜的企業級後台系統，我始終專注於 SEO 優化、無障礙設計及卓越的用戶體驗 (UX)。",
-    "expertise_title": "我的核心開發經驗包括：",
-    "expertise_items": {
-      "annotation": {
-        "title": "互動式平面標註介面",
-        "desc": "開發高精度的影像標註工具 (Canvas/SVG)。"
-      },
-      "ai": {
-        "title": "AI 參數調控測試平台",
-        "desc": "解決複雜的狀態管理與即時預覽需求。"
-      },
-      "admin": {
-        "title": "企業級管理後台",
-        "desc": "整合數據可視化與權限控管的完整系統。"
-      }
-    },
-    "closing": "我的代碼風格就像 Shark 一樣——精準且高效。如果您正在尋找一位能駕馭複雜邏輯，並具備產品思維的工程師，歡迎與我聯繫！",
-    "cta_projects": "查看專案",
-    "cta_code": "檢視程式碼品質",
-    "rwd_capability": "精通 RWD 響應式模版開發 (電腦 · 平板 · 手機)"
+    "greeting": "Hi, 我是 SharkLian。",
+    "h1": "將複雜的商業邏輯，轉化為極致流暢的數位體驗。",
+    "h2": "擁有 5 年實戰經驗的全端工程師 (React & Node.js)。專注於高互動性前端開發、穩健的 API 架構與資料庫設計，為您的企業打造具備高擴充性的現代化解決方案。",
+    "cta_primary": "開始討論您的專案"
   },
   "Services": {
-    "label": "服務項目",
-    "title": "只承接具技術挑戰性的工作",
-    "description": "我不做簡單的形象網站，我構建驅動您業務的核心引擎。",
-    "items": {
-      "visualization": {
-        "title": "複雜數據視覺化",
-        "desc": "利用 D3.js 與 Recharts 將原始數據轉化為具備互動性、輔助決策的儀表板。"
-      },
-      "api": {
-        "title": "高擴展性 API 架構",
-        "desc": "設計每秒可處理 5 萬次以上請求的高併發 Node.js/NestJS 後端。"
-      },
-      "legacy": {
-        "title": "舊系統現代化重構",
-        "desc": "在無停機的情況下，將單體式舊代碼庫重構為模組化的微前端架構。"
-      }
-    }
-  },
-  "FeaturedWork": {
-    "label": "精選作品",
-    "title": "專案展示",
-    "view_demo": "查看 Demo",
-    "desktop_only": "僅支援桌機版",
-    "responsive": "支援桌機與手機",
-    "more_coming": "更多專案即將上線...",
-    "projects": {
-      "annotation": {
-        "category": "AI / 電腦視覺工具",
-        "title": "圖像標註平台",
-        "desc": "專為 AI 與電腦視覺工作流程設計的專業級圖像標註工具。支援拖放批量上傳、精準標註工具，以及針對長時間使用優化的深色主題介面。",
-        "tags": ["React", "Material-UI", "Vite", "Canvas API"]
-      },
-      "intelligence": {
-        "category": "電商與管理後台",
-        "title": "Shark Intelligence",
-        "desc": "雙模式零售平台，包含顧客模式（購物與結帳）及管理者模式（即時分析戰情室與庫存管理）。支援深淺色主題切換及多語言。",
-        "tags": ["React", "TypeScript", "Tailwind CSS", "i18n"]
-      },
-      "art": {
-        "category": "創意編程 / 藝術展示",
-        "title": "ArtSide 藝廊",
-        "desc": "運用生物發光視覺美學打造的高級數位藝覽，整合流暢的動態互動體驗。",
-        "tags": ["React", "TypeScript", "Tailwind CSS", "framer-motion"]
-      }
-    }
-  },
-  "HireMe": {
-    "title": "與我合作",
-    "desc": "我目前接受自由接案與合約開發委託。您可以在以下平台找到我：",
-    "platforms": {
-      "upwork": "Upwork",
-      "glints": "Glints",
-      "fiverr": "Fiverr"
+    "frontend": {
+      "title": "前端工程與互動設計",
+      "tech": "React.js, TypeScript, Tailwind CSS, State Management (Redux/Zustand)",
+      "value": "打造極致流暢的單頁應用程式 (SPA)。注重 RWD 響應式設計、Core Web Vitals 效能優化與複雜的狀態管理，提供無可挑剔的使用者體驗。"
     },
-    "cta": "查看個人檔案"
+    "backend": {
+      "title": "後端架構與 API 開發",
+      "tech": "NestJS, Express.js, RESTful API, Node.js",
+      "value": "設計高安全性、易於維護的伺服器架構。擅長微服務概念、權限控管 (RBAC) 與第三方服務的高效整合。"
+    },
+    "database": {
+      "title": "資料庫設計與系統部署",
+      "tech": "SQL (PostgreSQL/MySQL), Git, Docker (Optional)",
+      "value": "嚴謹的關聯式資料庫正規化設計，確保資料的一致性與查詢效能。配合 Git 版本控制，實現穩定且透明的開發交付流程。"
+    }
   },
-  "TechStack": {
-    "title": "驅動下一代應用程式的核心技術"
+  "FeaturedProjects": {
+    "project_a": {
+      "title": "企業級高階影像標註系統",
+      "type": "全端開發 (Full-Stack Development)",
+      "tech": "React, Konva.js, TypeScript, NestJS, PostgreSQL",
+      "desc": "為企業客戶開發的高效能影像處理工具。前端運用 Konva.js 處理複雜的 2D 畫布渲染、圖層管理與多邊形座標計算，突破傳統 DOM 操作的效能瓶頸；後端使用 NestJS 建構穩定的 REST API，處理大量的座標資料儲存與權限驗證。",
+      "achievement_1": "支援單圖超過 1000 個標註物件且不卡頓。",
+      "achievement_2": "大幅降低客戶 40% 的人工作業時間。"
+    },
+    "project_b": {
+      "title": "客製化營運管理儀表板",
+      "type": "系統重構與新功能開發 (System Refactoring & Feature Development)",
+      "tech": "React (Next.js), Tailwind CSS, Express.js, SQL",
+      "desc": "接手並重構舊有系統的技術債。導入現代化的 React 架構與嚴謹的 TypeScript 型別檢查，重新設計資料庫 Schema 解決查詢緩慢的問題，並建立視覺化的營運數據看板，大幅提升管理團隊的決策效率。",
+      "achievement_1": "API 回應速度提升 300%。",
+      "achievement_2": "成功導入深色模式與多語系 (i18n) 支援。"
+    }
   },
-  "AboutProcess": {
-    "title": "工作流程",
-    "description": "軟體開發是團隊運動。這是我的戰術手冊。",
-    "steps": {
-      "discovery": {
-        "title": "探索與策略",
-        "desc": "分析您的商業目標、用戶需求與技術限制，定義最佳解決方案。"
+  "Workflow": {
+    "step_1": {
+      "title": "需求對齊 (Discovery & Scoping)",
+      "desc": "深入了解您的商業目標，產出明確的需求規格書 (SRS) 與技術提案。"
+    },
+    "step_2": {
+      "title": "架構設計 (Architecture Design)",
+      "desc": "敲定最合適的技術選型 (React + Node.js 生態)，規劃 API 規格與資料庫結構。"
+    },
+    "step_3": {
+      "title": "敏捷開發 (Agile Development)",
+      "desc": "採用迭代式開發，定期展示階段性成果，確保專案方向精準無誤。"
+    },
+    "step_4": {
+      "title": "測試與交付 (Testing & Delivery)",
+      "desc": "執行嚴謹的代碼審查與效能測試，交付高品質的原始碼與部署文件。"
+    }
+  },
+  "About": {
+    "title": "關於我",
+    "content": "擁有近 5 年業界實戰經驗，專注於為企業打造高效、直覺的數位產品介面。我致力於建構具備高度穩定性與易擴充性的企業級系統；從老舊管理後台的架構翻新，到開發高複雜度的互動式介面，我能精準掌控不同領域的開發需求，提供品質與效能兼具的解決方案。",
+    "cta": "聯繫我",
+    "hero_title": "專注於打造\n卓越的數位體驗",
+    "hero_subtitle": "身為一名前端出身的全端工程師，我深知視覺呈現與底層架構同樣重要。我致力於在效能、可維護性與使用者體驗之間取得完美平衡。",
+    "stats_experience": "實戰經驗",
+    "stats_projects": "交付專案",
+    "stats_satisfaction": "客戶滿意度",
+    "skills_title": "技術能力",
+    "frontend_title": "前端開發",
+    "frontend_desc": "打造流暢、響應式且高互動性的使用者介面",
+    "backend_title": "後端架構",
+    "backend_desc": "設計穩健、安全且高擴充性的 API 服務",
+    "tools_title": "開發工具與部署",
+    "tools_desc": "現代化的開發流程與環境配置",
+    "cta_title": "準備好開始您的專案了嗎？",
+    "cta_desc": "讓我們一起將您的想法轉化為高品質的數位產品。"
+  },
+  "ContactForm": {
+    "title": "讓我們一起打造卓越產品",
+    "fields": {
+      "name": {
+        "label": "您的姓名",
+        "placeholder": "我該如何稱呼您？"
       },
-      "architecture": {
-        "title": "系統架構設計",
-        "desc": "在寫下第一行程式碼之前，先設計可擴展的資料庫架構與 API 模式。"
+      "email": {
+        "label": "聯絡郵件",
+        "placeholder": "方便聯繫您的 Email"
       },
-      "development": {
-        "title": "敏捷開發",
-        "desc": "迭代衝刺 (Sprints) 並定期演示。您每週都能看到進度，而不是等到最後期限。"
+      "subject": {
+        "label": "您感興趣的服務？",
+        "options": [
+          "網頁開發 (Web Dev)",
+          "UI/UX 設計",
+          "API 整合",
+          "技術諮詢"
+        ]
       },
-      "deployment": {
-        "title": "快速部署",
-        "desc": "簡化的建置與部署流程，實現產品的快速交付。"
+      "budget": {
+        "label": "預算範圍",
+        "placeholder": "例如：$2,000 - $5,000"
+      },
+      "time": {
+        "label": "期望時程",
+        "placeholder": "您希望何時完成？"
+      },
+      "description": {
+        "label": "專案簡述",
+        "placeholder": "請簡單描述您的目標與想法..."
+      }
+    },
+    "submit": "送出訊息",
+    "success": "訊息已成功送出！我會盡快回覆您。",
+    "error": "抱歉，送出時發生錯誤。請再試一次或直接透過 Email 聯繫。"
+  },
+  "Experience": {
+    "years": "5+ 年實戰經驗",
+    "title": "工作經歷與專案亮點",
+    "role": "Full-Stack Engineer",
+    "items": {
+      "ai_panel": {
+        "title": "AI 數據分析儀表板",
+        "desc": "從頭參與產品架構與前端核心開發。使用 Vue3 + ECharts 構建高互動性的數據視覺化介面，實現拖拉式客製化排版，並透過 WebSocket 提供即時 AI 數據推播，畫面更新延遲低於 100ms。"
+      },
+      "eip": {
+        "title": "集團 EIP 內部工作平台",
+        "desc": "負責重構陳舊的內部系統。導入 Vite 與 Tailwind CSS，解決原本編譯過慢的問題（縮短 80% 時間）。並利用 Pinia 建立嚴謹的全域狀態管理，處理複雜的多身分權限管控 (RBAC)。"
+      },
+      "revenue": {
+        "title": "營收與會計帳務系統",
+        "desc": "與後端深度協作，處理龐大的金流報表資料。在前端引入虛擬長列表 (Virtual Scrolling) 技術，使擁有萬筆紀錄的表格依然能保持 60fps 順暢捲動，解決了業務端長期的效能痛點。"
+      },
+      "annotation": {
+        "title": "進階影像標註工具 (Konva.js)",
+        "desc": "為企業客戶打造高效能的影像處理前端。捨棄傳統 DOM，全面採用 Canvas (Konva.js) 渲染。支援上千個多邊形標籤物件的即時拖曳、縮放與座標計算，且畫面無卡頓。"
+      },
+      "custom": {
+        "title": "客製化專案開發與部署",
+        "desc": "除了前端邏輯，也包辦 Node.js (Express/NestJS) 的 API 開發。具備獨立作業能力，能處理從資料庫設計、第三方 API 串接，到最終的 Docker 容器化部署流程。"
       }
     }
   },
   "Footer": {
-    "title": "SharkLian Portfolio.",
-    "copyright": "© {year} Senior Full-Stack Engineer."
+    "title": "SharkLian Dev",
+    "copyright": "© {year} SharkLian Dev. 版權所有。"
   }
 }

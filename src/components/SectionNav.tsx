@@ -1,26 +1,26 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useLenis } from "lenis/react";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { usePathname } from "@/i18n/routing";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function SectionNav() {
   const t = useTranslations("Topbar");
   const lenis = useLenis();
+  const pathname = usePathname();
   const [activeSection, setActiveSection] = useState("top");
 
   const sections = [
     { id: "top", label: t("web_design") },
-    { id: "tech-stack", label: "Skills" },
     { id: "services", label: t("services") },
-    { id: "projects", label: t("projects") },
     { id: "process", label: t("process") },
-    { id: "hire", label: t("hire") },
+    { id: "contact", label: t("hire") },
   ];
 
   useGSAP(() => {
@@ -41,6 +41,8 @@ export function SectionNav() {
       duration: 1.5,
     });
   };
+
+  if (pathname !== "/") return null;
 
   return (
     <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-end gap-6">
